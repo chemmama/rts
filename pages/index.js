@@ -11,8 +11,8 @@ const { MediaContextProvider, Media } = createMedia({
 })
 
 class IndexContainer extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
        
     }
   
@@ -47,7 +47,7 @@ class Index extends React.Component {
      
     render() {
         return (
-            <div>
+            <div> 
                 <MediaContextProvider>
                 <IndexContainer >{this.props.children}</IndexContainer>
                 <MobileIndex>{this.props.children}</MobileIndex>
