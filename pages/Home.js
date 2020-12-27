@@ -18,7 +18,7 @@ export default class Home extends React.Component {
             this.state.chauffage === "" ? this.setState({ errorChauffage: { content: 'Svp faite un choix', pointing: 'below'}}) : this.setState({ errorChauffage: null })
             this.state.famille === "" ? this.setState({ errorFamille: { content: 'Svp faite un choix', pointing: 'below' }}) : this.setState({ errorFamille: null })
             this.state.fiscalite === "" ? this.setState({ errorFiscalite: { content: 'Svp faite un choix', pointing: 'below' }}) : this.setState({ errorFiscalite: null })
-            
+            hoho
     }
    
     render() {
