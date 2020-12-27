@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Button, Image, Grid, Dropdown, Segment, Label, Form, Checkbox, Icon } from 'semantic-ui-react'
+import { Container, Button, Image, Grid, Dropdown, Segment, Label, Form, Checkbox, Icon,Message } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
-
+  
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -13,12 +13,16 @@ export default class Home extends React.Component {
     
     handleSubmit(e) {
         e.preventDefault();
-            this.state.proprio === "" ? this.setState({ errorProprio: { content: 'Svp faite un choix', pointing: 'below' }}) : this.setState({ errorProprio: null })
-            this.state.salarie === "" ? this.setState({ errorSalarie: { content: 'Svp faite un choix', pointing: 'below' }}) : this.setState({ errorSalarie: null })
-            this.state.chauffage === "" ? this.setState({ errorChauffage: { content: 'Svp faite un choix', pointing: 'below'}}) : this.setState({ errorChauffage: null })
-            this.state.famille === "" ? this.setState({ errorFamille: { content: 'Svp faite un choix', pointing: 'below' }}) : this.setState({ errorFamille: null })
-            this.state.fiscalite === "" ? this.setState({ errorFiscalite: { content: 'Svp faite un choix', pointing: 'below' }}) : this.setState({ errorFiscalite: null })
-            hoho
+            this.state.proprio === "" ? this.setState({ errorProprio: { content:"",pointing:null}}) : this.setState({ errorProprio: null })
+            this.state.salarie === "" ? this.setState({ errorSalarie: { content:"",pointing:null}}) : this.setState({ errorSalarie: null })
+            this.state.chauffage === "" ? this.setState({ errorChauffage: { content: "", pointing:null}}) : this.setState({ errorChauffage: null })
+            this.state.famille === "" ? this.setState({ errorFamille: { content: "", pointing:null}}): this.setState({ errorFamille: null })
+            this.state.fiscalite === "" ? this.setState({ errorFiscalite: { content: "", pointing:null}}) : this.setState({ errorFiscalite: null })
+            this.state.proprio === "" ? alert("Selectionnez un choix") :
+            this.state.salarie === "" ? alert("Selectionnez un choix") :
+            this.state.chauffage === "" ? alert("Selectionnez un choix") :
+            this.state.famille === "" ? alert("Selectionnez un choix"): 
+            this.state.fiscalité === "" ? alert("Selectionnez un choix") :alert("bonne saisie")
     }
    
     render() {
@@ -65,7 +69,7 @@ export default class Home extends React.Component {
                                 </p>
                                     <Form onSubmit={e=>this.handleSubmit(e)}>
                                         
-                                        <Form.Field clearable 
+                                        <Form.Field 
                                                 error={this.state.errorProprio}
                                                 required
                                                 label="Vous Etes" 
@@ -77,6 +81,11 @@ export default class Home extends React.Component {
                                                 onChange={this.handleChange}
                                             
                                             /> 
+                                        <Message
+                                            error
+                                            header='Action Forbidden'
+                                            content='You can only sign up for an account once with a given e-mail address.'
+                                        />
                                             <Form.Field clearable
                                                 error={this.state.errorSalarie}
                                                 required    
@@ -198,7 +207,6 @@ export default class Home extends React.Component {
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
-                   
                 </Container>
             </Layout>
         )
