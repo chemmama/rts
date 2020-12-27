@@ -64,6 +64,7 @@ export default class Home extends React.Component {
                                 <Segment color="black">
                                     Dans le cadre de la transition écologique, l'État prend en charge le coût de l’installation de votre pompe à chaleur pour seulement 1€ !<br />
                                     Des milliers de foyers français en ont déjà profité, pourquoi pas vous ?
+                                    <p style={{color:'red'}}>* saisie obligatoire</p>
                                 <p style={{ fontFamily: "Comic sans MS", color: "green", fontSize: 30, textAlign: "center" }}>
                                         Vérifiez votre éligibité
                                 </p>
