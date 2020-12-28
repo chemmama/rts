@@ -1,14 +1,15 @@
 import React from "react";
 import { Container, Button, Image, Grid, Dropdown, Segment, Label, Form, Checkbox, Icon,Message } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
-  
 
+import * as emailjs from 'emailjs-com'
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {proprio:"",salarie:"",chauffage:"",famille:"",fiscalite:"",
                       nom:"",prenom:"",adresse:"",localite:"",email:"",telephone:""};
     }
+
     handleChange = (e, { name, value }) => this.setState({ [name]: value });
     
     handleSubmit(e) {
@@ -20,10 +21,38 @@ export default class Home extends React.Component {
             this.state.fiscalite === "" ? this.setState({ errorFiscalite: { content: "", pointing:null}}) : this.setState({ errorFiscalite: null })
             this.state.proprio === "" ? alert("Selectionnez un choix") :
             this.state.salarie === "" ? alert("Selectionnez un choix") :
-            this.state.chauffage === "" ? alert("Selectionnez un choix") :
+            this.state.chauffage === "" ? alert("Selectionnez un choix"):
             this.state.famille === "" ? alert("Selectionnez un choix"): 
-            this.state.fiscalité === "" ? alert("Selectionnez un choix") :alert("bonne saisie")
+            this.state.fiscalité === "" ? alert("Selectionnez un choix"):this.dataContact()
     }
+         
+    dataContact(){ 
+    const { proprio, salarie, chauffage, famille, fiscalite,
+            nom, prenom, adresse, localite, email, telephone}=this.state
+        
+        let templateParams = {
+            from_name: email,
+            to_name: nom,
+            proprio: proprio,
+            salarie: salarie,
+            chauffage:chauffage,
+            famille:famille,
+            fiscalite:fiscalite,
+            adresse:adresse,
+            localite:localite,
+            email:email,
+            telephone:telephone,
+            penom:prenom,
+       
+        }
+        emailjs.send('my_Gmail','eligibilite', templateParams,'user_O4rTmyvCyhnUYTJrczkMv')
+            .then((result) => {
+                alert(result.text);
+            }, (error) => {
+                alert(error.text);
+            });
+        }
+    
    
     render() {
         const { mobile } = this.props
@@ -50,6 +79,7 @@ export default class Home extends React.Component {
                                 <iframe width="420" height="315"
                                     src="https://www.youtube.com/embed/0m1QWV3vTzo">
                                 </iframe>
+                                
                                 <h2>Nos qualifications</h2>
                                 <Image.Group size='tiny'>
                                     <Image src="img/ecolo/engagement-qualite.png" width="auto" height="60" alt="" />
@@ -59,17 +89,15 @@ export default class Home extends React.Component {
 
 
                             </Grid.Column>
-
                             <Grid.Column style={{ paddingTop: mobile ? 10 : 20, fontFamily: "Comic sans MS" }}>
                                 <Segment color="black">
                                     Dans le cadre de la transition écologique, l'État prend en charge le coût de l’installation de votre pompe à chaleur pour seulement 1€ !<br />
                                     Des milliers de foyers français en ont déjà profité, pourquoi pas vous ?
                                     <p style={{color:'red'}}>* saisie obligatoire</p>
                                 <p style={{ fontFamily: "Comic sans MS", color: "green", fontSize: 30, textAlign: "center" }}>
-                                        Vérifiez votre éligibité
-                                </p>
+                                        Vérifiez votre éligibité</p>
+                                    
                                     <Form onSubmit={e=>this.handleSubmit(e)}>
-                                        
                                         <Form.Field 
                                                 error={this.state.errorProprio}
                                                 required
@@ -82,11 +110,7 @@ export default class Home extends React.Component {
                                                 onChange={this.handleChange}
                                             
                                             /> 
-                                        <Message
-                                            error
-                                            header='Action Forbidden'
-                                            content='You can only sign up for an account once with a given e-mail address.'
-                                        />
+                                        
                                             <Form.Field clearable
                                                 error={this.state.errorSalarie}
                                                 required    
@@ -110,6 +134,7 @@ export default class Home extends React.Component {
                                                 name="chauffage"
                                                 onChange={this.handleChange} 
                                             />
+
                                             <Form.Field clearable
                                                 error={this.state.errorFamille}
                                                 required    
@@ -156,6 +181,7 @@ export default class Home extends React.Component {
                                                     onChange={this.handleChange}
                                                 />
                                         </Form.Group>
+
                                         <Form.Group>
                                                 <Form.Input 
                                                     required 
@@ -196,13 +222,14 @@ export default class Home extends React.Component {
                                                 name="telephone"
                                                 value={this.state.telephone}
                                                 onChange={this.handleChange}
-                                                
                                             />
                                         </Form.Group>
+
                                         <Form.Field>
                                             <Checkbox label="J'autorise R.T.S à me recontacter pour me communiquer mon statut d'éligibilité" />
                                         </Form.Field>
-                                        <Form.Button disabled={this.state.active} fluid type="submit"color="green" ><h2>Vérifier mon éligibilité</h2></Form.Button>
+                                       
+                                        <Form.Button fluid type="submit"color="green" ><h2>Vérifier mon éligibilité</h2></Form.Button>
                                     </Form>
                                 </Segment>
                             </Grid.Column>

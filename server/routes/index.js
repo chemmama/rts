@@ -3,9 +3,9 @@ const router = express.Router()
 var nodeMailer =require ('nodemailer'); 
  
 router.post('/dataContact', (req, res) => {
-    const name = req.body.dataContact.name
-    const email = req.body.dataContact.email
-    const textArea = req.body.dataContact.textArea
+    const proprio = req.body.dataContact.proprio
+    const salarie = req.body.dataContact.salarie
+    const chauffage = req.body.dataContact.chauffage
   
     let transporter = nodeMailer.createTransport({
         host: 'smtp.gmail.com',
@@ -25,7 +25,7 @@ router.post('/dataContact', (req, res) => {
         from:'karatefullfighting@gmail.com',
         to: 'karatefullfighting@gmail.com',
         subject: "renseignement sur karate full fighting",
-        html:"<h2>Nom:</h2>"+name+"<br/><h2>adresse email de la demande:</h2>"+email+"<br/><h2>Votre demande</h2>"+textArea
+        html:"<h2>Nom:</h2>"+proprio+"<br/><h2>adresse email de la demande:</h2>"+salarie+"<br/><h2>Votre demande</h2>"+chauffage
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
