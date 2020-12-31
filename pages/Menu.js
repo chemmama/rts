@@ -1,10 +1,8 @@
 import React from 'react'
 import { createMedia } from '@artsy/fresnel'
 import {Container, Icon, Image, Menu,Segment, Sidebar, Visibility} from 'semantic-ui-react'
-
 import PropTypes from 'prop-types';
 import Mobile from "./Mobile.js"
-
 
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
@@ -16,8 +14,6 @@ const { MediaContextProvider, Media } = createMedia({
 })
 
 const html = ''
-
-
 
 class DesktopContainer extends React.Component {
     state = {}
@@ -115,7 +111,7 @@ class MobileContainer extends React.Component {
                         vertical
                         visible={sidebarOpened}
                     >
-                        <Menu.Item><Image src="img/ecolo/france.png" /></Menu.Item>
+                         
                         <Menu.Item
                             name='Home' href="/"
                             active={activeItem === 'Home'}

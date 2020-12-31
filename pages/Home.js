@@ -1,8 +1,9 @@
 import React from "react";
-import { Container, Button, Image, Grid, Dropdown, Segment, Label, Form, Checkbox, Icon,Message } from 'semantic-ui-react'
+import { Container, Button, Image, Grid, Dropdown, Segment, Embed, Form, Checkbox, Icon,Item} from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
-
+import Pourquoi from'../pages/Pourquoi'
 import * as emailjs from 'emailjs-com'
+
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -51,9 +52,12 @@ export default class Home extends React.Component {
             }, (error) => {
                 alert(error.text);
             });
+                this.state.proprio === "",this.state.salarie === "" ,this.state.chauffage === "",this.state.famille === "" 
+                this.state.fiscalite === "" 
+                this.state.nom="",this.state.prenom="",this.state.adresse="",this.state.localite="",this.state.email="",
+                this.state.telephone=""
         }
     
-   
     render() {
         const { mobile } = this.props
         return (
@@ -61,40 +65,60 @@ export default class Home extends React.Component {
                 <Container>
                     <Grid>
                         <Grid.Row centered columns={2}>
-                            <Grid.Column style={{ paddingTop: 10, fontFamily: "Comic sans MS" }}>
+                            <Grid.Column style={{fontFamily: "Comic sans MS" }}>
                                 <h1 style={{ fontFamily: "Comic sans MS", color: "green" }}><center>Votre Pompe à chaleur entierement financé par</center></h1>
-                                <Image src="img/ecolo/action-logement.png" />
-                                <ul>
-                                    <li><strong>Réduisez vos factures de 70% </strong>:La pompe à chaleur vous permet de faire des
-                                            économies considérables <strong>Elle divise la facture de chauffage par 3 !</strong>
-                                    </li>
-
-                                    <li><strong>Fini la pollution</strong>:Passez aux énergies vertes et propres.</li>
-
-                                    <li><strong> Des professionnels Reconnus Grenelle de l’Environnement</strong>, vous ferons
-                                                    bénéficier de la Loi de Transition Energétique {this.state.proprio}
-                                        </li>
-                                </ul>
-
-                                <iframe width="420" height="315"
-                                    src="https://www.youtube.com/embed/0m1QWV3vTzo">
-                                </iframe>
+                                <Image src="img/ecolo/action-logement.png"/>
+                                <Embed
+                                    aspectRatio='16:9'
+                                    id='0m1QWV3vTzo'
+                                     placeholder='/img/ecolo/ecologie-youtube.jpg'
+                                    source='youtube'
+                                />
                                 
-                                <h2>Nos qualifications</h2>
-                                <Image.Group size='tiny'>
-                                    <Image src="img/ecolo/engagement-qualite.png" width="auto" height="60" alt="" />
-                                    <Image src="img/ecolo/qualipac.png" width="auto" height="60" alt="..." />
-                                    <Image src="img/ecolo/garantie-satisfaction.png" width="auto" height="60" alt="..." />
-                                </Image.Group>
+                                
+                                
+                                <h1 style={{ fontFamily: "comic sans MS", textAlign: "center", color: "green" }}><u>Comment l'obtenir</u></h1>
+                                <Item.Group divided>
+                                    <Item>
+                                        <Item.Image size='tiny' src="img/ecolo/validez.png" alt="validez"/>
+                                        <Item.Content verticalAlign='middle'>
+                                            <Item.Header>Remplissez le formulaire</Item.Header>
+                                        </Item.Content>
+                                    </Item>
+                                    <Item>
+                                        <Item.Image size='tiny'  src="img/ecolo/telephone.png" alt="telephone"/>
+                                        <Item.Content verticalAlign='middle'>
+                                            <Item.Header> Un professionnel vous contact afin d'ouvrir votre dossier et convenir d'un rendez-vous</Item.Header>
+                                        </Item.Content>
+                                    </Item>
+                                    <Item>
+                                        <Item.Image size='tiny'  src="img/ecolo/ouvrier.png" alt="merci"/>
+                                        <Item.Content verticalAlign='middle'>
+                                            <Item.Header> Une équipe de techniciens confirmés RGE se déplace chez vous afin de réaliser vos travaux</Item.Header>
+                                        </Item.Content>
+                                    </Item>
+                                    <Item>
+                                        <Item.Image size='tiny'  src="img/ecolo/remerciement.png" alt="merci" />
+                                        <Item.Content verticalAlign='middle'>
+                                            <Item.Header>Vous ne payez que 1 euro Sur présentation du devis , sans aucun frais avancé</Item.Header>
+                                        </Item.Content>
+                                    </Item>
+                                    <Item>
+                                        <Item.Image size='tiny' src="img/ecolo/logocee.png" alt="" />
+                                        <Item.Content verticalAlign='middle'>
+                                            <Item.Header>l'etat finance  pour 1€ symbolique</Item.Header>
+                                        </Item.Content>
+                                    </Item>
 
-
+                                </Item.Group>
                             </Grid.Column>
-                            <Grid.Column style={{ paddingTop: mobile ? 10 : 20, fontFamily: "Comic sans MS" }}>
+                          
+                            <Grid.Column style={{ paddingTop: mobile ? 10 : 100, fontFamily: "Comic sans MS" }}>
                                 <Segment color="black">
                                     Dans le cadre de la transition écologique, l'État prend en charge le coût de l’installation de votre pompe à chaleur pour seulement 1€ !<br />
                                     Des milliers de foyers français en ont déjà profité, pourquoi pas vous ?
                                     <p style={{color:'red'}}>* saisie obligatoire</p>
-                                <p style={{ fontFamily: "Comic sans MS", color: "green", fontSize: 30, textAlign: "center" }}>
+                                <p style={{ fontFamily: "Comic sans MS", color: "green", fontSize: mobile ?20:30, textAlign: "center"}}>
                                         Vérifiez votre éligibité</p>
                                     
                                     <Form onSubmit={e=>this.handleSubmit(e)}>
@@ -224,11 +248,9 @@ export default class Home extends React.Component {
                                                 onChange={this.handleChange}
                                             />
                                         </Form.Group>
-
                                         <Form.Field>
                                             <Checkbox label="J'autorise R.T.S à me recontacter pour me communiquer mon statut d'éligibilité" />
                                         </Form.Field>
-                                       
                                         <Form.Button fluid type="submit"color="green" ><h2>Vérifier mon éligibilité</h2></Form.Button>
                                     </Form>
                                 </Segment>
@@ -236,7 +258,8 @@ export default class Home extends React.Component {
                         </Grid.Row>
                     </Grid>
                 </Container>
-            </Layout>
+            <Pourquoi/>
+        </Layout>
         )
     }
 }
