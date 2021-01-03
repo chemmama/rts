@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Image, Container, Segment, Grid, Button } from 'semantic-ui-react'
-import PropTypes from 'prop-types';
+import {Container, Segment, Grid, Button } from 'semantic-ui-react'
+
 
 export default class Renove extends React.Component {
     constructor(props) {
@@ -66,9 +66,7 @@ export default class Renove extends React.Component {
                                     
                                 </Grid.Column>
                             </Grid.Row>
-
                         </Grid>
-                        
                     </Segment>
                     
                 </Container>
@@ -83,10 +81,6 @@ export default class Renove extends React.Component {
                         <Button type="submit" color="green">
                             Vérifier mon éligibilité</Button>
                 </Segment>
-                     
-                           
-                           
-               
             </div>
         )
     }
