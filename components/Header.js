@@ -36,10 +36,7 @@ export default class Header extends React.Component {
                 </script>
                 </head>
 
-                <body >
-
-                    
-                </body>
+                 
                 <MyMenu />
             </div> 
 

@@ -1,8 +1,13 @@
-import React from "react";
-import { Container, Button, Image, Grid, Dropdown, Segment, Embed, Form, Checkbox, Icon,Item} from 'semantic-ui-react'
+import React, { Children } from "react";
+import { Container,Image, Grid, Dropdown, Segment, Embed, Form, Checkbox,Item} from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
 import Pourquoi from'../pages/Pourquoi'
 import * as emailjs from 'emailjs-com'
+import PropTypes from 'prop-types';
+import Dispositif from '../pages/Dispositif'
+import Renove from "../pages/Renove"
+import Cee from"../pages/Cee"
+import Mission from "../pages/Mission"
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -11,6 +16,9 @@ export default class Home extends React.Component {
                       nom:"",prenom:"",adresse:"",localite:"",email:"",telephone:""};
     }
 
+    
+   
+    
     handleChange = (e, { name, value }) => this.setState({ [name]: value });
     
     handleSubmit(e) {
@@ -59,206 +67,217 @@ export default class Home extends React.Component {
         }
     
     render() {
+        const { children } = this.props
         const { mobile } = this.props
+        Home.propTypes = {
+            mobile: PropTypes.bool
+        }
         return (
             <Layout>
-                <Container>
-                    <Grid>
-                        <Grid.Row centered columns={2}>
-                            <Grid.Column style={{fontFamily: "Comic sans MS" }}>
-                                <h1 style={{ fontFamily: "Comic sans MS", color: "green" }}><center>Votre Pompe à chaleur entierement financé par</center></h1>
-                                <Image src="img/ecolo/action-logement.png"/>
-                                <Embed
-                                    aspectRatio='16:9'
-                                    id='0m1QWV3vTzo'
-                                     placeholder='/img/ecolo/ecologie-youtube.jpg'
-                                    source='youtube'
-                                />
-                                
-                                
-                                
-                                <h1 style={{ fontFamily: "comic sans MS", textAlign: "center", color: "green" }}><u>Comment l'obtenir</u></h1>
-                                <Item.Group divided>
-                                    <Item>
-                                        <Item.Image size='tiny' src="img/ecolo/validez.png" alt="validez"/>
-                                        <Item.Content verticalAlign='middle'>
-                                            <Item.Header>Remplissez le formulaire</Item.Header>
-                                        </Item.Content>
-                                    </Item>
-                                    <Item>
-                                        <Item.Image size='tiny'  src="img/ecolo/telephone.png" alt="telephone"/>
-                                        <Item.Content verticalAlign='middle'>
-                                            <Item.Header> Un professionnel vous contact afin d'ouvrir votre dossier et convenir d'un rendez-vous</Item.Header>
-                                        </Item.Content>
-                                    </Item>
-                                    <Item>
-                                        <Item.Image size='tiny'  src="img/ecolo/ouvrier.png" alt="merci"/>
-                                        <Item.Content verticalAlign='middle'>
-                                            <Item.Header> Une équipe de techniciens confirmés RGE se déplace chez vous afin de réaliser vos travaux</Item.Header>
-                                        </Item.Content>
-                                    </Item>
-                                    <Item>
-                                        <Item.Image size='tiny'  src="img/ecolo/remerciement.png" alt="merci" />
-                                        <Item.Content verticalAlign='middle'>
-                                            <Item.Header>Vous ne payez que 1 euro Sur présentation du devis , sans aucun frais avancé</Item.Header>
-                                        </Item.Content>
-                                    </Item>
-                                    <Item>
-                                        <Item.Image size='tiny' src="img/ecolo/logocee.png" alt="" />
-                                        <Item.Content verticalAlign='middle'>
-                                            <Item.Header>l'etat finance  pour 1€ symbolique</Item.Header>
-                                        </Item.Content>
-                                    </Item>
-
-                                </Item.Group>
-                            </Grid.Column>
-                          
-                            <Grid.Column style={{ paddingTop: mobile ? 10 : 100, fontFamily: "Comic sans MS" }}>
-                                <Segment color="black">
-                                    Dans le cadre de la transition écologique, l'État prend en charge le coût de l’installation de votre pompe à chaleur pour seulement 1€ !<br />
-                                    Des milliers de foyers français en ont déjà profité, pourquoi pas vous ?
-                                    <p style={{color:'red'}}>* saisie obligatoire</p>
-                                <p style={{ fontFamily: "Comic sans MS", color: "green", fontSize: mobile ?20:30, textAlign: "center"}}>
-                                        Vérifiez votre éligibité</p>
+                <Container fluid>
+                    <Segment vertical>
+                        <Grid container stackable verticalAlign='center'>
+                            <Grid.Row>
+                                <Grid.Column floated="left" width={6}style={{fontFamily: "Arial" }}>
+                                    <h1 style={{ 
+                                        fontFamily: "Times New Roman'", 
+                                        color: "green", 
+                                        textAlign: "center", 
+                                        fontSize:mobile ? 25 :40 
+                                        }}>
+                                        Votre Pompe à chaleur entierement financé par</h1>
+                                   
+                                        <Image src="img/ecolo/action-logement.png"/>
+                                            <Embed
+                                                aspectRatio='16:9'
+                                                id='0m1QWV3vTzo'
+                                                placeholder='/img/ecolo/ecologie-youtube.jpg'
+                                                source='youtube'
+                                            />
                                     
-                                    <Form onSubmit={e=>this.handleSubmit(e)}>
-                                        <Form.Field 
-                                                error={this.state.errorProprio}
-                                                required
-                                                label="Vous Etes" 
-                                                placeholder="----"
-                                                fluid
-                                                options={proprio}
-                                                control={Dropdown}
-                                                name="proprio"
-                                                onChange={this.handleChange}
-                                            
-                                            /> 
+                                        <h1 style={{ 
+                                            fontFamily: "comic sans MS", 
+                                            textAlign: "center", color: "green",
+                                            fontSize:mobile?25:35
+                                            }}>
+                                            <u>Comment l'obtenir</u></h1>
                                         
-                                            <Form.Field clearable
-                                                error={this.state.errorSalarie}
-                                                required    
-                                                label="Vous etes salarié"
-                                                placeholder="----"
-                                                fluid
-                                                options={salarie}
-                                                control={Dropdown}
-                                                name="salarie"
-                                                onChange={this.handleChange}
-                                            />
-                                         
-                                            <Form.Field clearable
-                                                error={this.state.errorChauffage}
-                                                required    
-                                                label="Votre type de Chauffage"
-                                                placeholder="----"
-                                                fluid
-                                                options={chauffage}
-                                                control={Dropdown}
-                                                name="chauffage"
-                                                onChange={this.handleChange} 
-                                            />
+                                            <Item>
+                                            <Item.Image src="img/ecolo/validez.png" alt="validez" size='tiny'/>
+                                                <Item.Content verticalAlign='middle'>
+                                                    <Item.Header>Remplissez le formulaire</Item.Header>
+                                                </Item.Content>
+                                            </Item>
+                                            <Item>
+                                        <Item.Image size='tiny' src="img/ecolo/telephone.png" alt="telephone" />
+                                                <Item.Content verticalAlign='middle'>
+                                                    <Item.Header> Un professionnel vous contact afin d'ouvrir votre dossier et convenir d'un rendez-vous</Item.Header>
+                                                </Item.Content>
+                                            </Item>
+                                            <Item>
+                                                <Item.Image size='tiny' src="img/ecolo/ouvrier.png" alt="ouvrier RGE" />
+                                                <Item.Content verticalAlign='middle'>
+                                                    <Item.Header> Une équipe de techniciens confirmés RGE se déplace chez vous afin de réaliser vos travaux</Item.Header>
+                                                </Item.Content>
+                                            </Item>
+                                            <Item>
+                                                <Item.Image size='tiny' src="img/ecolo/remerciement.png" alt="remerciement" />
+                                                <Item.Content verticalAlign='middle'>
+                                                    <Item.Header>Vous ne payez que 1 euro Sur présentation du devis , sans aucun frais avancé</Item.Header>
+                                                </Item.Content>
+                                            </Item><br/>
+                                            <Item>
+                                                <Item.Image size='small' src="img/ecolo/logocee.png" alt="logo-cee" />
+                                                <Item.Content verticalAlign='middle'>
+                                                    <Item.Header>l'etat finance  pour 1€ symbolique</Item.Header>
+                                                </Item.Content>
+                                            </Item>
+                                        
+                                   
+                                </Grid.Column>
+                            
+                                <Grid.Column floated='right' width={8} style={{ paddingTop: mobile ? 10 :20, fontFamily: "Comic sans MS",backgroundColor:"white" }}>
+                                    Dans le cadre de la transition écologique, l'État prend en charge le coût de l’installation de
+                                    votre pompe à chaleur pour seulement 1€ !<br />
+                                    Des milliers de foyers français en ont déjà profité, pourquoi pas vous ?
+                                    <p style={{ color: 'red' }}>* saisie obligatoire</p>
+                                    <p style={{ fontFamily: "Comic sans MS", color: "green", fontSize: mobile ? 20 : 30, textAlign: "center" }}>
+                                        Vérifiez votre éligibité</p>
 
-                                            <Form.Field clearable
-                                                error={this.state.errorFamille}
-                                                required    
-                                                label="Nombre de personne vivant dans le foyer"
-                                                placeholder="----"
-                                                fluid
-                                                options={famille}
-                                                control={Dropdown}
-                                                name="famille"
-                                                onChange={this.handleChange}
-                                             />
-                                            
-                                            <Form.Field clearable
-                                                error={this.state.errorFiscalite}
-                                                required    
-                                                label="Revenue fiscal de référence (2020 ou 2019)"
-                                                placeholder="----"
-                                                fluid
-                                                options={fiscalite}
-                                                control={Dropdown}
-                                                name="fiscalite"
-                                                onChange={this.handleChange}
-                                             />
-                                       
+                                    <Form onSubmit={e => this.handleSubmit(e)}>
+                                        <Form.Field
+                                            error={this.state.errorProprio}
+                                            required
+                                            label="Vous Etes"
+                                            placeholder="----"
+                                            fluid
+                                            options={proprio}
+                                            control={Dropdown}
+                                            name="proprio"
+                                            onChange={this.handleChange}
+
+                                        />
+
+                                        <Form.Field clearable
+                                            error={this.state.errorChauffage}
+                                            required
+                                            label="Votre type de Chauffage"
+                                            placeholder="----"
+                                            fluid
+                                            options={chauffage}
+                                            control={Dropdown}
+                                            name="chauffage"
+                                            onChange={this.handleChange}
+                                        />
+
+                                        <Form.Field clearable
+                                            error={this.state.errorFamille}
+                                            required
+                                            label="Nombre de personne vivant dans le foyer"
+                                            placeholder="----"
+                                            fluid
+                                            options={famille}
+                                            control={Dropdown}
+                                            name="famille"
+                                            onChange={this.handleChange}
+                                        />
+
+                                        <Form.Field clearable
+                                            error={this.state.errorFiscalite}
+                                            required
+                                            label="Revenue fiscal de référence (2020 ou 2019)"
+                                            placeholder="----"
+                                            fluid
+                                            options={fiscalite}
+                                            control={Dropdown}
+                                            name="fiscalite"
+                                            onChange={this.handleChange}
+                                        />
+
                                         <Form.Group>
-                                                <Form.Input 
-                                                    required    
-                                                    label='Nom' 
-                                                    placeholder="Nom"
-                                                    width={9}
-                                                    name="nom" 
-                                                    value={this.state.nom}
-                                                    onChange={this.handleChange}
-                                                />
-                                                <Form.Input 
+                                            <Form.Input
+                                                required
+                                                label='Nom'
+                                                placeholder="Nom"
+                                                width={9}
+                                                name="nom"
+                                                value={this.state.nom}
+                                                onChange={this.handleChange}
+                                            />
+                                            <Form.Input
                                                 icon='lock'
-                                                iconPosition='left'  
-                                                    required    
-                                                    label='Prénom' 
-                                                    placeholder='Prénom' 
-                                                    width={9} 
-                                                    name="prenom"
-                                                    value={this.state.prenom}
-                                                    onChange={this.handleChange}
-                                                />
+                                                iconPosition='left'
+                                                required
+                                                label='Prénom'
+                                                placeholder='Prénom'
+                                                width={9}
+                                                name="prenom"
+                                                value={this.state.prenom}
+                                                onChange={this.handleChange}
+                                            />
                                         </Form.Group>
 
                                         <Form.Group>
-                                                <Form.Input 
-                                                    required 
-                                                    icon="adress"
-                                                    iconPosition='left'  
-                                                    label="Adresse"
-                                                    placeholder='Adresse' 
-                                                    width={9} 
-                                                    name="adresse"
-                                                    value={this.state.adresse}
-                                                    onChange={this.handleChange}
-                                                />
-                                                <Form.Input 
-                                                    required    
-                                                    label='Localité' 
-                                                    placeholder='Localité' 
-                                                    width={9}
-                                                    name="localite"
-                                                    value={this.state.localite}
-                                                    onChange={this.handleChange}
-                                                 />
+                                            <Form.Input
+                                                required
+                                                icon="adress"
+                                                iconPosition='left'
+                                                label="Adresse"
+                                                placeholder='Adresse'
+                                                width={9}
+                                                name="adresse"
+                                                value={this.state.adresse}
+                                                onChange={this.handleChange}
+                                            />
+                                            <Form.Input
+                                                required
+                                                label='Localité'
+                                                placeholder='Localité'
+                                                width={9}
+                                                name="localite"
+                                                value={this.state.localite}
+                                                onChange={this.handleChange}
+                                            />
                                         </Form.Group>
                                         <Form.Group>
                                             <Form.Input type="email"
-                                                required    
-                                                label='Email' 
-                                                placeholder='contact@gmail.com' 
-                                                width={9} 
+                                                required
+                                                label='Email'
+                                                placeholder='contact@gmail.com'
+                                                width={9}
                                                 name="email"
                                                 value={this.state.email}
                                                 onChange={this.handleChange}
                                             />
-                                            <Form.Input 
-                                                required    
-                                                label='Telephone' 
-                                                placeholder='0698611372' 
+                                            <Form.Input
+                                                required
+                                                label='Telephone'
+                                                placeholder='0698611372'
                                                 width={9}
                                                 name="telephone"
                                                 value={this.state.telephone}
                                                 onChange={this.handleChange}
                                             />
-                                        </Form.Group>
+                                        </Form.Group><br/><br/>
                                         <Form.Field>
                                             <Checkbox label="J'autorise R.T.S à me recontacter pour me communiquer mon statut d'éligibilité" />
-                                        </Form.Field>
-                                        <Form.Button fluid type="submit"color="green" ><h2>Vérifier mon éligibilité</h2></Form.Button>
+                                        </Form.Field><br/><br/>
+                                        <Form.Button fluid type="submit" color="green" style={{
+                                            fontSize:mobile ?15:20
+                                        }}>
+                                        Vérifier mon éligibilité</Form.Button>
                                     </Form>
-                                </Segment>
-                            </Grid.Column>
-                        </Grid.Row>
-                    </Grid>
+
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
+                    </Segment>
                 </Container>
-            <Pourquoi/>
+            <Pourquoi mobile/>
+            <Dispositif mobile/>
+            <Renove mobile/>
+            <Cee mobile/>
+            <Mission mobile/>
         </Layout>
         )
     }

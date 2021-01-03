@@ -10,11 +10,8 @@ export default class Mobile extends React.Component {
     }
 
     render() {
-
         const { mobile } = this.props
-
         return (
-
             <Container text>
                 <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} animationOutDuration={1000} isVisible={true}>
                     <Image src="img/ecolo/logo.png" size="small" centered />
@@ -22,17 +19,15 @@ export default class Mobile extends React.Component {
                         as='h1'
                         content='Rénovation Tertiaire service'
                         color="green"
-
                         style={{
                             fontSize: mobile ? '2em' : '4em',
                             fontWeight: 'normal',
                             marginBottom: 0,
-                            marginTop: mobile ? '0.5em' : '1em',
+                            marginTop: mobile ? '0' : '1em',
                             textDecoration: "underline",
                             textAlign: "center"
                         }}
                     />
-
                     <Header
                         as='h2'
                         content='Vos projets entierement financé'
@@ -41,7 +36,8 @@ export default class Mobile extends React.Component {
                             fontSize: mobile ? '0.7em' : '1em',
                             fontWeight: 'normal',
                             marginTop: mobile ? '0.5em' : '0.5em',
-                            textAlign: "center"
+                            textAlign: "center",
+                            color:'black'
                         }}
                     />
                 </Animated>

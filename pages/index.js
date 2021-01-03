@@ -1,43 +1,34 @@
 import React from 'react'
 import Home from "./Home"
-import { createMedia } from '@artsy/fresnel'
- 
+import { createMedia } from '@artsy/fresnel' 
+
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
         mobile: 0,
         tablet: 768,
         computer: 1024,
+        ecran: 1192
     }
 })
 
+
 class IndexContainer extends React.Component {
-    constructor(props) {
-        super(props)
-       
-    }
-  
     render() {
+        const { children } = this.props
         return (
             <Media greaterThan='mobile'>
-                <Home />
+                <Home/>
             </Media> 
         )
     }
 }
 
-
 class MobileIndex extends React.Component {
-    constructor() {
-        super()
-         
-    }
-     
     render() {
         const { children } = this.props
         return (
-
             <Media at='mobile'>
-                <Home mobile />
+                <Home mobile/>
             </Media>
         )
     }

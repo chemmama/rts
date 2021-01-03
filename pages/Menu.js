@@ -2,14 +2,15 @@ import React from 'react'
 import { createMedia } from '@artsy/fresnel'
 import {Container, Icon, Image, Menu,Segment, Sidebar, Visibility} from 'semantic-ui-react'
 import PropTypes from 'prop-types';
-import Mobile from "./Mobile.js"
+import Mobile from "../pages/Mobile.js"
+
 
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
-        sm: 0,
-        md: 768,
-        lg: 1024,
-        xl: 1192
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
     }
 })
 
@@ -27,10 +28,14 @@ class DesktopContainer extends React.Component {
         const { children } = this.props
         const { fixed } = this.state
         const { activeItem } = this.state
+       
+        DesktopContainer.propTypes = {
+            children: PropTypes.node,
+        }
 
         return (
             <Container fluid>
-                <Media greaterThan='lg'>
+                <Media greaterThan='mobile'>
                     <Visibility
                         once={false}
                         onBottomPassed={this.showFixedMenu}
@@ -48,26 +53,22 @@ class DesktopContainer extends React.Component {
                                         </Menu.Item>
                                         <Menu.Item position='right'>
                                         <Menu.Item
-                                            name='Pourquoi' href={"#pourquoi" + html}
-                                            active={activeItem === 'Pourquoi'}
+                                            name='Interet' href={"#interet" + html}
+                                            active={activeItem === 'Interet'}
                                             onClick={this.handleItemClick} />
                                         <Menu.Item
-                                            name='Dispositif' href={"#dispositf" + html}
-                                            active={activeItem === 'Dispositif'}
+                                            name='Les dispositifs' href={"#dispositif" + html}
+                                            active={activeItem === 'Les dispositifs'}
                                             onClick={this.handleItemClick} />
                                         <Menu.Item
-                                            name='Mission' href={"#mission"+html}
-                                            active={activeItem === 'mission'}
+                                            name='Notre mission' href={"#mission"+html}
+                                            active={activeItem === 'Notre mission'}
                                             onClick={this.handleItemClick} />
                                         <Menu.Item
-                                            name='Partenaires' href={"#partenaires"+ html}
-                                            active={activeItem === 'partenaires'}
+                                            name='Nos partenaires' href={"#partenaires"+ html}
+                                            active={activeItem === 'Nos partenaires'}
                                             onClick={this.handleItemClick} />
                                          
-                                        <Menu.Item
-                                            name="Contact" href={"#Contactez nous" + html}
-                                            active={activeItem === 'Contact'}
-                                            onClick={this.handleItemClick} />
                                     </Menu.Item>
                                 </Container>
                             </Menu>
@@ -79,8 +80,8 @@ class DesktopContainer extends React.Component {
             
         )
     }
+    
 }
-
 
 
 
@@ -101,36 +102,34 @@ class MobileContainer extends React.Component {
         }
 
         return (
-            <Media as={Sidebar.pushable} between={["sm", "xl"]}>
+            <Media as={Sidebar.pushable} between={["module", "tablet"]}>
                 <Sidebar.Pushable>
                     <Sidebar
                         as={Menu}
                         animation='push'
-                        inverted
                         onHide={this.handleSidebarHide}
                         vertical
                         visible={sidebarOpened}
                     >
-                         
                         <Menu.Item
                             name='Home' href="/"
                             active={activeItem === 'Home'}
                             onClick={this.handleItemClick} />
                         <Menu.Item
-                            name='Pourquoi' href={"/Pourquoi" + html}
-                            active={activeItem === 'Pourquoi'}
+                            name='Interet' href={"#interet" + html}
+                            active={activeItem === 'Interet'}
                             onClick={this.handleItemClick} />
                         <Menu.Item
-                            name='Qui sommes nous' href={"/QuiSommesNous" + html}
-                            active={activeItem === 'Qui Somme Nous'}
+                            name='Les dispositifs' href={"#aide" + html}
+                            active={activeItem === 'Les dispositifs'}
                             onClick={this.handleItemClick} />
                         <Menu.Item
-                            name='telecharger le reglement' href={"/Download" + html}
-                            active={activeItem === 'telecharger le reglement'}
+                            name='Notre mission' href={"#mission" + html}
+                            active={activeItem === 'Notre mission'}
                             onClick={this.handleItemClick} />
                         <Menu.Item
-                            name="Contact" href={"/Contactez" + html}
-                            active={activeItem === 'Contact'}
+                            name="Nos partenaires" href={"#partenaire" + html}
+                            active={activeItem === 'Nos partenaires'}
                             onClick={this.handleItemClick} />
                     </Sidebar>
                     <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -142,13 +141,13 @@ class MobileContainer extends React.Component {
 
                         >
                             <Container>
-                                <Menu inverted pointing secondary size='tiny'>
+                                <Menu inverted secondary size='tiny'>
                                     <Menu.Item onClick={this.handleToggle}>
-                                        <Icon name='sidebar' />
+                                        <Icon circular color='teal' name='sidebar' />
                                     </Menu.Item>
                                 </Menu>
                             </Container>
-                            <Mobile mobile />
+                            <Mobile mobile/>
                         </Segment>
                         {children}
                     </Sidebar.Pusher>
@@ -158,16 +157,11 @@ class MobileContainer extends React.Component {
     }
 }
 
-
-
-
 const MyMenu = ({ children }) => (
     <div>
         <MediaContextProvider>
-
             <DesktopContainer>{children}</DesktopContainer>
             <MobileContainer>{children}</MobileContainer>
-
         </MediaContextProvider>
     </div>
 )
