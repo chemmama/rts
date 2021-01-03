@@ -10,8 +10,6 @@ export default class Renove extends React.Component {
 
     render() {
         const { mobile } = this.props
-
-
         return (
             <div>
                 <Segment>

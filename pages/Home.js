@@ -17,8 +17,6 @@ export default class Home extends React.Component {
     }
 
     
-   
-    
     handleChange = (e, { name, value }) => this.setState({ [name]: value });
     
     handleSubmit(e) {
@@ -91,7 +89,7 @@ export default class Home extends React.Component {
                                             <Embed
                                                 aspectRatio='16:9'
                                                 id='0m1QWV3vTzo'
-                                                placeholder='/img/ecolo/ecologie-youtube.jpg'
+                                                placeholder='img/ecolo/ecologieyoutube.jpg'
                                                 source='youtube'
                                             />
                                     

@@ -37,7 +37,7 @@ export default class Dispositif extends React.Component {
                                 </Grid.Column>    
                                 
                                 <Grid.Column  width={10}>
-                                    <Image src="img/ecolo/pompe_a_chaleur.png" size="medium"/>
+                                    <Image src="img/ecolo/pompeachaleur.png" size="medium"/>
                                 </Grid.Column>    
                                     
                                 <Grid.Column floated='left' width={6}>
