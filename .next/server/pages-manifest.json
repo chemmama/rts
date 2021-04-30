@@ -3,7 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/Qualification": "pages/Qualification.js",
-  "/": "pages/index.js",
   "/Pac": "pages/Pac.js",
+  "/": "pages/index.js",
   "/Mission": "pages/Mission.js"
 }

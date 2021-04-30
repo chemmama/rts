@@ -119,11 +119,7 @@ class DesktopContainer extends React.Component {
                                     active={activeItem === 'Qui sommes nous'}
                                     onClick={this.handleItemClick}
                                 />
-                                <Menu.Item
-                                    name='Nos Prestations' href="/" style={{fontWeight: "bold" }}
-                                    active={activeItem === 'Nos Prestations'}
-                                    onClick={this.handleItemClick}
-                                />
+                            
 
                                 <Menu.Item
                                     name='Qualification' href="/Qualification" style={{fontWeight: "bold" }}
@@ -217,11 +213,7 @@ class MobileContainer extends React.Component {
                             active={activeItem === 'Qui sommes nous'}
                             onClick={this.handleItemClick}
                         />
-                        <Menu.Item
-                            name='Nos Prestations' href="/" style={{ fontWeight: "bold" }}
-                            active={activeItem === 'Nos Prestations'}
-                            onClick={this.handleItemClick}
-                        />
+                         
 
                         <Menu.Item
                             name='Qualification' href="/Qualification" style={{ fontWeight: "bold" }}
