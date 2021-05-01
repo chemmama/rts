@@ -1,9 +1,22 @@
 import React from "react";
 import { Image, Container, Grid, Segment } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
+import { createMedia } from '@artsy/fresnel'
 
 
-export default class BallonSolaire extends React.Component {
+
+
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
+
+
+ class IndexBallonSolaire extends React.Component {
     constructor(props) {
         super(props);
 
@@ -52,6 +65,42 @@ export default class BallonSolaire extends React.Component {
                 </Container>
             </Layout>
 
+        )
+    }
+}
+
+class GreatherBallonSolaire extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media greaterThan='mobile'>
+                <IndexBallonSolaire />
+            </Media>
+        )
+    }
+}
+
+class MobileBallonSolaire extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["mobile", "tablet"]}>
+                <IndexBallonSolaire mobile />
+            </Media>
+        )
+    }
+}
+
+export default class BallonSolaire extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <MediaContextProvider>
+                    <GreatherBallonSolaire >{this.props.children}</GreatherBallonSolaire >
+                    <MobileBallonSolaire>{this.props.children}</MobileBallonSolaire>
+                </MediaContextProvider>
+            </div>
         )
     }
 }

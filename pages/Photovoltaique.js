@@ -1,9 +1,18 @@
 import React from "react";
 import { Image, Container, Grid, Segment } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
+import { createMedia } from '@artsy/fresnel'
 
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
 
-export default class Photovoltaique extends React.Component {
+class IndexPhotovoltaique extends React.Component {
     constructor(props) {
         super(props);
 
@@ -62,6 +71,41 @@ export default class Photovoltaique extends React.Component {
                 </Container>
             </Layout>
 
+        )
+    }
+}
+class GreatherPhotovoltaique extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media greaterThan='mobile'>
+                <IndexPhotovoltaique />
+            </Media>
+        )
+    }
+}
+
+class MobilePhotovoltaique extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["mobile", "tablet"]}>
+                <IndexPhotovoltaique mobile />
+            </Media>
+        )
+    }
+}
+
+export default class Photovoltaique extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <MediaContextProvider>
+                    <GreatherPhotovoltaique >{this.props.children}</GreatherPhotovoltaique>
+                    <MobilePhotovoltaique>{this.props.children}</MobilePhotovoltaique>
+                </MediaContextProvider>
+            </div>
         )
     }
 }

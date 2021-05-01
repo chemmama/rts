@@ -1,9 +1,18 @@
 import React from "react";
 import { Image, Container, Grid, Segment, Accordion, Icon } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
+import { createMedia } from '@artsy/fresnel'
 
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
 
-export default class Cloison extends React.Component {
+ class IndexCloison extends React.Component {
     constructor(props) {
         super(props);
 
@@ -226,6 +235,41 @@ export default class Cloison extends React.Component {
                     </Accordion>
                 </Container>
             </Layout>
+        )
+    }
+}
+class GreatherCloison extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media greaterThan='mobile'>
+                <IndexCloison />
+            </Media>
+        )
+    }
+}
+
+class MobileCloison extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["mobile", "tablet"]}>
+                <IndexCloison mobile />
+            </Media>
+        )
+    }
+}
+
+export default class Cloison extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <MediaContextProvider>
+                    <GreatherCloison >{this.props.children}</GreatherCloison>
+                    <MobileCloison>{this.props.children}</MobileCloison>
+                </MediaContextProvider>
+            </div>
         )
     }
 }

@@ -1,10 +1,19 @@
 import React from "react";
 import {Container, Segment, Grid, Button,Image } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
-import Fiche from "../pages/Fiche"
+import Fiche from "./Fiche"
+import { createMedia } from '@artsy/fresnel'
 
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
 
-export default class Mission extends React.Component {
+class IndexMission extends React.Component {
    
     constructor(props) {
         super(props);
@@ -91,6 +100,41 @@ export default class Mission extends React.Component {
                
                          
             </Layout>
+        )
+    }
+}
+class GreatherMission extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["tablet", "ecran"]}>
+                <IndexMission />
+            </Media>
+        )
+    }
+}
+
+class MobileMission extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["mobile", "tablet"]}>
+                <IndexMission mobile />
+            </Media>
+        )
+    }
+}
+
+export default class Mission extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <MediaContextProvider>
+                    <GreatherMission >{this.props.children}</GreatherMission>
+                    <MobileMission>{this.props.children}</MobileMission>
+                </MediaContextProvider>
+            </div>
         )
     }
 }

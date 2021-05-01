@@ -5,7 +5,7 @@ import { createMedia } from '@artsy/fresnel'
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
         mobile: 0,
-        tablet: 768,
+        tablet: 900,
         computer: 1024,
         ecran: 1192
     }

@@ -1,10 +1,18 @@
 import React from "react";
 import { Container, Image, Card, Grid ,Button} from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
-import Fiche from "../pages/Fiche"
+import Fiche from "./Fiche"
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
 
 
-export default class Qualification extends React.Component {
+class IndexQualification extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -105,3 +113,39 @@ export default class Qualification extends React.Component {
         )
     }
 }
+class GreatherQualification extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media greaterThan='mobile'>
+                <IndexQualification />
+            </Media>
+        )
+    }
+}
+
+class MobileQualification extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["mobile", "tablet"]}>
+                <IndexQualification mobile />
+            </Media>
+        )
+    }
+}
+
+export default class Qualification extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <MediaContextProvider>
+                    <GreatherQualification  >{this.props.children}</GreatherQualification >
+                    <MobileQualification >{this.props.children}</MobileQualification >
+                </MediaContextProvider>
+            </div>
+        )
+    }
+}
+

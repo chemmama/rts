@@ -2,9 +2,18 @@ import { urlObjectKeys } from "next/dist/next-server/lib/utils";
 import React from "react";
 import { Image, Container, Grid, Segment, Accordion, Icon } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
+import { createMedia } from '@artsy/fresnel'
 
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
 
-export default class Nettoyage extends React.Component {
+ class IndexNettoyage extends React.Component {
     constructor(props) {
         super(props);
 
@@ -29,7 +38,7 @@ export default class Nettoyage extends React.Component {
             textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
             textAlign: "center",
             fontFamily: "verdana",
-            fontSize: 25
+            fontSize: mobile?2:25
         }
         return (
             <Layout>
@@ -299,6 +308,42 @@ export default class Nettoyage extends React.Component {
                     </Accordion>
                 </Container>
             </Layout>
+        )
+    }
+}
+
+class GreatherNettoyage extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media greaterThan='mobile'>
+                <IndexNettoyage />
+            </Media>
+        )
+    }
+}
+
+class MobileNettoyage extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["mobile", "tablet"]}>
+                <IndexNettoyage mobile />
+            </Media>
+        )
+    }
+}
+
+export default class Nettoyage extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <MediaContextProvider>
+                    <GreatherNettoyage >{this.props.children}</GreatherNettoyage>
+                    <MobileNettoyage>{this.props.children}</MobileNettoyage>
+                </MediaContextProvider>
+            </div>
         )
     }
 }

@@ -1,9 +1,17 @@
 import React from "react";
 import { Image, Container, Grid, Segment } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
 
 
-export default class Plomberie extends React.Component {
+class Plomberie extends React.Component {
     constructor(props) {
         super(props);
 
@@ -51,6 +59,41 @@ export default class Plomberie extends React.Component {
                 </Container>
             </Layout>
 
+        )
+    }
+}
+class GreatherPlomberie extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media greaterThan='mobile'>
+                <IndexPlomberie />
+            </Media>
+        )
+    }
+}
+
+class MobilePlomberie extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["mobile", "tablet"]}>
+                <IndexPlomberie mobile />
+            </Media>
+        )
+    }
+}
+
+export default class Plomberie extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <MediaContextProvider>
+                    <GreatherPlomberie  >{this.props.children}</GreatherPlomberie >
+                    <MobilePlomberie >{this.props.children}</MobilePlomberie >
+                </MediaContextProvider>
+            </div>
         )
     }
 }

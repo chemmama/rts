@@ -3,12 +3,11 @@ import { createMedia } from '@artsy/fresnel'
 import { Container, Icon, Image, Menu, Segment, Sidebar, Visibility,Dropdown } from 'semantic-ui-react'
 import PropTypes from 'prop-types';
 import Mobile from "../pages/Mobile.js"
-import Link from "next/link"
 
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
         mobile: 0,
-        tablet: 768,
+        tablet: 900,
         computer: 1024,
         ecran: 1192
     }
@@ -19,7 +18,7 @@ const shadow =
     color: 'white',
     textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
     fontFamily: "Comic Sans MS",
-    fontSize: 25
+    fontSize: 17
 }
 
 const shadow2 =
@@ -31,8 +30,8 @@ const shadow2 =
     fontSize: 11
 }
 
-const html = ''
-const {color}="red"
+const html =""
+
 
 class DesktopContainer extends React.Component {
 
@@ -42,8 +41,6 @@ class DesktopContainer extends React.Component {
     hideFixedMenu = () => this.setState({ fixed: false })
     showFixedMenu = () => this.setState({ fixed: true })
   
-   
-   
     render() {
         const { children } = this.props
         const { activeItem } = this.state
@@ -54,34 +51,32 @@ class DesktopContainer extends React.Component {
         }
 
         return (
-            <Container fluid>
+            <Container fluid >
                 <Media greaterThan='mobile'>
                     <Visibility
                         once={false}
                         onBottomPassed={this.showFixedMenu}
                         onBottomPassedReverse={this.hideFixedMenu}
                     >
-                        <Segment textAlign='center' vertical style={{backgroundColor:'lightgrey'}}>
-                            <Menu style={{ backgroundColor: 'whitesmoke' }} compact icon='labeled'>
+                        <Segment vertical style={{backgroundColor:'lightgrey'}}>
+                            <Menu style={{ backgroundColor: 'whitesmoke' }} stackable fluid>
                                 
-                                <Menu.Item>
-                                <Image src='img/ecolo/rts.png'
+                                <Menu.Item><Image src='img/ecolo/rts.png'
                                     as='a'
                                     size='tiny'
                                     href='/'
-                                    position='left'
+                                   
                                 />
                                 </Menu.Item>
                                  
                                  
-                                 <Menu.Item inverted position="left" style={shadow}
+                                 <Menu.Item inverted style={shadow}
                                     name='Rénovation Tertiaire Service' 
                                    
                                 />
 
-
-                                <Menu.Item
-                                    name='Nettoyage' href="/Nettoyage" style={{ fontWeight:"bold"}}
+                                <Menu.Item position="right"
+                                    name='Nettoyage' href={"/Nettoyage"+html} style={{ fontWeight:"bold"}}
                                     active={activeItem === 'Nettoyage'}
                                     onClick={this.handleItemClick}
                                 >
@@ -89,40 +84,40 @@ class DesktopContainer extends React.Component {
                                        Nettoyage
                                 </Menu.Item>
 
-                                <Dropdown item text='R.G.E'simple position="right" style={{fontWeight:"bold"}}>
+                                <Dropdown item text='R.G.E'simple style={{fontWeight:"bold"}}>
                                     <Dropdown.Menu>
-                                        <Dropdown.Item Link href="/Pac">Pac air eau</Dropdown.Item>
-                                        <Dropdown.Item Link href="/Ite">Isolation exterieur</Dropdown.Item>
-                                        <Dropdown.Item Link href="/Iti">Isolation interieur</Dropdown.Item>
-                                        <Dropdown.Item Link href="/Climatisation">Pac air air</Dropdown.Item>
-                                        <Dropdown.Item Link href="/Photovoltaique">Photovoltaique</Dropdown.Item>
-                                        <Dropdown.Item Link href="/BallonSolaire">Ballon Solaire</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Pac"+html}>Pac air eau</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Ite"+html}>Isolation exterieur</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Iti"+html}>Isolation interieur</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/AirAir"+html}>Pac air air</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Photovoltaique"+html}>Photovoltaique</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/BallonSolaire"+html}>Ballon Solaire</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
-                                <Dropdown item text='Le Batiment' simple position="right" style={{ fontWeight: "bold" }} >
+                                <Dropdown item text='Le Batiment' simple style={{ fontWeight: "bold" }} >
                                     <Dropdown.Menu>
-                                        <Dropdown.Item Link href="/Electricite">Electricité</Dropdown.Item>
-                                        <Dropdown.Item Link href="/Plomberie">Plomberie</Dropdown.Item>
-                                        <Dropdown.Item Link href="/Revetement">Revetement sol</Dropdown.Item>
-                                        <Dropdown.Item Link href="/Cloison">Cloison bureau</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Electricite"+html}>Electricité</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Plomberie"+html}>Plomberie</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Revetement"+html}>Revetement sol</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Cloison"+html}>Cloison bureau</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 
-                                <Menu.Item position="right" style={{fontWeight: "bold" }}
-                                    name='Nos Partenaires' href="/Partenaire"
+                                <Menu.Item style={{fontWeight: "bold" }}
+                                    name='Nos Partenaires' href={"/Partenaire"+html}
                                     active={activeItem === 'Nos Partenaires'}
                                     onClick={this.handleItemClick}
                                 />
 
                                 <Menu.Item
-                                    name='Qui sommes nous' href="/Mission" style={{fontWeight: "bold" }}
+                                    name='Qui sommes nous' href={"/Mission"+html}style={{fontWeight: "bold" }}
                                     active={activeItem === 'Qui sommes nous'}
                                     onClick={this.handleItemClick}
                                 />
                             
 
                                 <Menu.Item
-                                    name='Qualification' href="/Qualification" style={{fontWeight: "bold" }}
+                                    name='Qualification' href={"/Qualification"+html} style={{fontWeight: "bold" }}
                                     active={activeItem === 'Qualification'}
                                     onClick={this.handleItemClick}
                                 />
@@ -154,7 +149,7 @@ class MobileContainer extends React.Component {
         }
 
         return (
-            <Media as={Sidebar.pushable} between={["module", "tablet"]}>
+            <Media as={Sidebar.pushable} between={["mobile", "tablet"]}>
                 <Sidebar.Pushable>
                     <Sidebar
                         as={Menu}
@@ -163,60 +158,50 @@ class MobileContainer extends React.Component {
                         vertical
                         visible={sidebarOpened}
                     >
-                        
-                        
-                        <Menu.Item>
-                            <Image src='img/ecolo/rts.png'
-                                as='a'
-                                size='tiny'
-                                href='/'
-                                position='left'
-                            />
-                        </Menu.Item>
-
-                        <Menu.Item inverted position="left" style={shadow}
-                            name='Rénovation Tertiaire Service'
-
-                        />
+                       
                         <Menu.Item
-                            name='Nettoyage' href="/Nettoyage" style={{ fontWeight: "bold" }}
+                            name='Nettoyage' href={"/Nettoyage" + html} style={{ fontWeight: "bold" }}
                             active={activeItem === 'Nettoyage'}
                             onClick={this.handleItemClick}
-                        />
-                        <Dropdown item text='R.G.E' simple position="right" style={{ fontWeight: "bold" }}>
+                        >
+                            <Image src="img/new1.png" size="mini" />
+                                       Nettoyage
+                        </Menu.Item>
+
+                        <Dropdown item text='R.G.E' pointing="left" style={{ fontWeight: "bold" }}>
                             <Dropdown.Menu>
-                                <Dropdown.Item Link href="/Pac">Pac air eau</Dropdown.Item>
-                                <Dropdown.Item Link href="/Ite">Isolation exterieur</Dropdown.Item>
-                                <Dropdown.Item Link href="/Iti">Isolation interieur</Dropdown.Item>
-                                <Dropdown.Item Link href="/Climatisation">Pac air air</Dropdown.Item>
-                                <Dropdown.Item Link href="/Photovoltaique">Photovoltaique</Dropdown.Item>
-                                <Dropdown.Item Link href="/BallonSolaire">Ballon Solaire</Dropdown.Item>
+                                <Dropdown.Item Link href={"/Pac" + html}>Pac air eau</Dropdown.Item>
+                                <Dropdown.Item Link href={"/Ite" + html}>Isolation exterieur</Dropdown.Item>
+                                <Dropdown.Item Link href={"/Iti" + html}>Isolation interieur</Dropdown.Item>
+                                <Dropdown.Item Link href={"/AirAir" + html}>Pac air air</Dropdown.Item>
+                                <Dropdown.Item Link href={"/Photovoltaique" + html}>Photovoltaique</Dropdown.Item>
+                                <Dropdown.Item Link href={"/BallonSolaire" + html}>Ballon Solaire</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
-                        <Dropdown item text='Le Batiment' simple position="right" style={{ fontWeight: "bold" }} >
+                        <Dropdown item text='Le Batiment'pointing="left" style={{ fontWeight: "bold" }} >
                             <Dropdown.Menu>
-                                <Dropdown.Item Link href="/Electricite">Electricité</Dropdown.Item>
-                                <Dropdown.Item Link href="/Plomberie">Plomberie</Dropdown.Item>
-                                <Dropdown.Item Link href="/Revetement">Revetement sol</Dropdown.Item>
-                                <Dropdown.Item Link href="/Cloison">Cloison bureau</Dropdown.Item>
+                                <Dropdown.Item Link href={"/Electricite" + html}>Electricité</Dropdown.Item>
+                                <Dropdown.Item Link href={"/Plomberie" + html}>Plomberie</Dropdown.Item>
+                                <Dropdown.Item Link href={"/Revetement" + html}>Revetement sol</Dropdown.Item>
+                                <Dropdown.Item Link href={"/Cloison" + html}>Cloison bureau</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
 
                         <Menu.Item position="right" style={{ fontWeight: "bold" }}
-                            name='Nos Partenaires' href="/Partenaire"
+                            name='Nos Partenaires' href={"/Partenaire" + html}
                             active={activeItem === 'Nos Partenaires'}
                             onClick={this.handleItemClick}
                         />
 
                         <Menu.Item
-                            name='Qui sommes nous' href="/Mission" style={{ fontWeight: "bold" }}
+                            name='Qui sommes nous' href={"/Mission" + html} style={{ fontWeight: "bold" }}
                             active={activeItem === 'Qui sommes nous'}
                             onClick={this.handleItemClick}
                         />
-                         
+
 
                         <Menu.Item
-                            name='Qualification' href="/Qualification" style={{ fontWeight: "bold" }}
+                            name='Qualification' href={"/Qualification" + html} style={{ fontWeight: "bold" }}
                             active={activeItem === 'Qualification'}
                             onClick={this.handleItemClick}
                         />

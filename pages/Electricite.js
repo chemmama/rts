@@ -1,9 +1,18 @@
 import React from "react";
 import { Image,Container, Grid,Segment } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
+import { createMedia } from '@artsy/fresnel'
 
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
 
-export default class Electricite extends React.Component {
+class IndexElectricite extends React.Component {
     constructor(props) {
         super(props);
 
@@ -99,6 +108,41 @@ export default class Electricite extends React.Component {
                 </Container>
             </Layout>
 
+        )
+    }
+}
+class GreatherIndexElectricite extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media greaterThan='mobile'>
+                <IndexElectricite />
+            </Media>
+        )
+    }
+}
+
+class MobileIndexElectricite extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["mobile", "tablet"]}>
+                <IndexElectricite mobile />
+            </Media>
+        )
+    }
+}
+
+export default class Electricite extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <MediaContextProvider>
+                    <GreatherIndexElectricite >{this.props.children}</GreatherIndexElectricite>
+                    <MobileIndexElectricite>{this.props.children}</MobileIndexElectricite>
+                </MediaContextProvider>
+            </div>
         )
     }
 }

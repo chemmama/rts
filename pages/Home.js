@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Image,Card,Grid } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
 import PropTypes from 'prop-types';
-import Cee from "../pages/Cee"
 import Link from "next/link" 
  
 
@@ -29,9 +28,9 @@ export default class Home extends React.Component {
             <Layout>
                 <h1 style={shadow}>Spécialité en rénovation Energetique</h1>
                 <Container style={{ textAlign: 'center'}}>
-                   <Grid divided='vertically'>
-                        <Grid.Row columns={mobile ?2:5}>
-                            <Grid.Column>
+                    <Grid>
+                        <Grid.Row  columns={mobile?2:5}>
+                            <Grid.Column style={{ paddingTop: 20 }}>
                                 <Card color="red">
                                     <Image src='img/avatar/pac.png' size="tiny" centered/>
                                     <Card.Content>
@@ -44,7 +43,7 @@ export default class Home extends React.Component {
                             </Grid.Column>
                       
                        
-                        <Grid.Column>
+                            <Grid.Column style={{ paddingTop: 20 }}>
                             <Card color="orange">
                                 <Image src='img/avatar/maison_exterieur.png' size="tiny" centered />
                             <Card.Content>
@@ -56,7 +55,7 @@ export default class Home extends React.Component {
                             </Card>
                         </Grid.Column>
 
-                            <Grid.Column>
+                            <Grid.Column style={{ paddingTop: 20 }}>
                                 <Card color="yellow">
                                     <Image src='img/avatar/maison_exterieur.png' size="tiny" centered />
                                     <Card.Content>
@@ -68,7 +67,7 @@ export default class Home extends React.Component {
                                 </Card>
                             </Grid.Column>
 
-                            <Grid.Column>
+                            <Grid.Column style={{ paddingTop: 20 }}>
                                 <Card color="olive">
                                     <Image src='img/avatar/climatisation.png' size="tiny" centered />
                                     <Card.Content>
@@ -80,7 +79,7 @@ export default class Home extends React.Component {
                                 </Card>
                             </Grid.Column>
 
-                            <Grid.Column>
+                            <Grid.Column style={{ paddingTop: 20 }}>
                                 <Card color="red">
                                     <Image src='img/avatar/cellule-photovoltaique.png' size="tiny" centered />
                                     <Card.Content>
@@ -92,13 +91,10 @@ export default class Home extends React.Component {
                                 </Card>
                             </Grid.Column>
 
-                        </Grid.Row>
-                    </Grid>
-
-
-                    <Grid divided='vertically' style={{textAlign:'center'}}>
-                        <Grid.Row columns={mobile ? 2 : 5}>
-                            <Grid.Column>
+                      
+                    
+                      
+                            <Grid.Column style={{paddingTop:20}}>
                                 <Card color="olive">
                                     <Image src='img/avatar/ballon-photovoltaique.png' size="tiny" centered />
                                     <Card.Content>
@@ -110,7 +106,7 @@ export default class Home extends React.Component {
                                 </Card>
                             </Grid.Column>
 
-                            <Grid.Column>
+                            <Grid.Column style={{paddingTop:20}}>
                                 <Card color="green">
                                     <Image src='img/avatar/electricite.png' size="tiny" centered/>
                                     <Card.Content>
@@ -123,7 +119,7 @@ export default class Home extends React.Component {
                             </Grid.Column>
 
 
-                            <Grid.Column>
+                            <Grid.Column style={{ paddingTop: 20 }}>
                                 <Card color="teal">
                                     <Image src='img/avatar/plomberie.png' size="tiny" centered />
                                     <Card.Content>
@@ -135,7 +131,7 @@ export default class Home extends React.Component {
                                 </Card>
                             </Grid.Column>
 
-                            <Grid.Column>
+                            <Grid.Column style={{paddingTop:20}}>
                                 <Card color="blue">
                                     <Image src='img/avatar/revetement_sol.png' size="tiny" centered />
                                     <Card.Content>
@@ -147,7 +143,7 @@ export default class Home extends React.Component {
                                 </Card>
                             </Grid.Column>
 
-                            <Grid.Column>
+                            <Grid.Column style={{ paddingTop: 20 }}>
                                 <Card color="blue">
                                     <Image src='img/avatar/cloison.png' size="tiny" centered />
                                     <Card.Content>

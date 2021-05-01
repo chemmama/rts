@@ -1,9 +1,20 @@
 import React from "react";
 import { Image, Container, Grid, Segment,Accordion,Icon } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
+import { createMedia } from '@artsy/fresnel'
+
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
 
 
-export default class Revetement extends React.Component {
+
+class IndexRevetement extends React.Component {
     constructor(props) {
         super(props);
 
@@ -164,6 +175,41 @@ export default class Revetement extends React.Component {
             </Accordion>
         </Container>
             </Layout>
+        )
+    }
+}
+class GreatherRevetement extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media greaterThan='mobile'>
+                <IndexRevetement />
+            </Media>
+        )
+    }
+}
+
+class MobileRevetement extends React.Component {
+    render() {
+        const { children } = this.props
+        return (
+            <Media between={["mobile", "tablet"]}>
+                <IndexRevetement mobile />
+            </Media>
+        )
+    }
+}
+
+export default class Revetement extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <MediaContextProvider>
+                    <GreatherRevetement >{this.props.children}</GreatherRevetement>
+                    <MobileRevetement>{this.props.children}</MobileRevetement>
+                </MediaContextProvider>
+            </div>
         )
     }
 }
