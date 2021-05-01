@@ -2,6 +2,9 @@ import React from "react";
 import { Container, Image, Card, Grid ,Button} from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
 import Fiche from "./Fiche"
+import { createMedia } from '@artsy/fresnel'
+
+
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
         mobile: 0,

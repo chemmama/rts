@@ -1,6 +1,8 @@
 import React from "react";
 import { Image, Container, Grid, Segment } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
+import { createMedia } from '@artsy/fresnel'
+
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
         mobile: 0,
@@ -11,7 +13,7 @@ const { MediaContextProvider, Media } = createMedia({
 })
 
 
-class Plomberie extends React.Component {
+class IndexPlomberie extends React.Component {
     constructor(props) {
         super(props);
 
@@ -90,8 +92,8 @@ export default class Plomberie extends React.Component {
         return (
             <div>
                 <MediaContextProvider>
-                    <GreatherPlomberie  >{this.props.children}</GreatherPlomberie >
-                    <MobilePlomberie >{this.props.children}</MobilePlomberie >
+                    <GreatherPlomberie>{this.props.children}</GreatherPlomberie >
+                    <MobilePlomberie>{this.props.children}</MobilePlomberie >
                 </MediaContextProvider>
             </div>
         )

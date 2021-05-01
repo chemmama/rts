@@ -3,6 +3,8 @@ import { Image, Container, Grid, Segment,Accordion,Icon } from 'semantic-ui-reac
 import Layout from "../components/MyLayout"
 import { createMedia } from '@artsy/fresnel'
 
+
+
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
         mobile: 0,

@@ -3,8 +3,16 @@ import { Container, Image, Grid, Segment, Embed, Item ,Card} from 'semantic-ui-r
 import Layout from "../components/MyLayout"
 import Contact from './Contact'
 import * as emailjs from 'emailjs-com'
- 
+import { createMedia } from '@artsy/fresnel'
 
+const { MediaContextProvider, Media } = createMedia({
+    breakpoints: {
+        mobile: 0,
+        tablet: 768,
+        computer: 1024,
+        ecran: 1192
+    }
+})
 
 class IndexAirAir extends React.Component {
     constructor(props) {
@@ -60,7 +68,7 @@ class IndexAirAir extends React.Component {
         this.state.proprio = "", this.state.salarie = "", this.state.chauffage = "", this.state.famille = ""
         this.state.fiscalite = ""
         this.state.nom = "", this.state.prenom = "", this.state.adresse = "", this.state.localite = "", this.state.email = "",
-            this.state.telephone = ""
+        this.state.telephone = ""
     }
 
     render() {
