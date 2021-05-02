@@ -14,7 +14,7 @@ export default class Mobile extends React.Component {
         return (
             <Container text>
                 <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} animationOutDuration={1000} isVisible={true}>
-                    <Image src="img/ecolo/rts.png" size="small" centered />
+                    <Image src="img/ecolo/rts.png" size="small" centered  href="/"/>
                     <Header
                         as='h1'
                         content='Rénovation Tertiaire service'
@@ -33,7 +33,7 @@ export default class Mobile extends React.Component {
                         content='Vos projets entierement financé'
                         inverted
                         style={{
-                            fontSize: mobile ? '0.7em' : '1em',
+                            fontSize: mobile ? '1.2em' : '1em',
                             fontWeight: 'normal',
                             marginTop: mobile ? '0.5em' : '0.5em',
                             textAlign: "center",

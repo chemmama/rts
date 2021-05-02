@@ -1,7 +1,6 @@
 import React from "react";
 import {Container, Segment, Grid, Button,Image } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
-import Fiche from "./Fiche"
 import { createMedia } from '@artsy/fresnel'
 
 const { MediaContextProvider, Media } = createMedia({
@@ -20,8 +19,6 @@ class IndexMission extends React.Component {
         this.state={}
     }
     
-    handleOpen = () => this.setState({ open: true})
-    handleClose = () => this.setState({ open:false })
     
     render() {
         const { mobile } = this.props
@@ -40,8 +37,6 @@ class IndexMission extends React.Component {
                         <blockquote style={{fontSize:mobile ? 12:25}}>
                             <strong>
                                 À propos de R.T.S</strong><br/><br/>
-                                <Button color="green" fluid onClick={this.handleOpen} ><h3>
-                                Vérifier mon éligibilité</h3></Button>
                         </blockquote> 
                 </Segment>
                 <Container fluid>
@@ -88,17 +83,8 @@ class IndexMission extends React.Component {
                     </Segment>
     
                     <Image src="img/ecolo/ecologie.png" centered/>
-                    <center>
-                        <Button color="green" onClick={this.handleOpen}>Vérifier mon éligibilité</Button>
-                    </center><br /><br /><br />
-                    <Fiche 
-                    open={this.state.open}
-                    onHide={() => this.handleClose()}
-                    />
+                    
                 </Container>
-                
-               
-                         
             </Layout>
         )
     }
@@ -107,7 +93,7 @@ class GreatherMission extends React.Component {
     render() {
         const { children } = this.props
         return (
-            <Media between={["tablet", "ecran"]}>
+            <Media greaterThan='mobile'>
                 <IndexMission />
             </Media>
         )

@@ -1,9 +1,10 @@
 import React from "react";
-import { Container, Image,Card,Grid } from 'semantic-ui-react'
+import { Container, Image,Card,Grid,Button} from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
 import PropTypes from 'prop-types';
 import Link from "next/link" 
- 
+import { Animated } from "react-animated-css";
+
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -11,23 +12,24 @@ export default class Home extends React.Component {
         this.state = {};
     }
 
-
+    
     render() {
         const { mobile } = this.props
-        
         const shadow =
-        {
-            color: 'white',
-            textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
-            textAlign: "center",
-            fontFamily: "verdana",
-            fontSize:mobile ? 22:32
-        }
-     
+            {
+                color: 'white',
+                textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+                textAlign: "center",
+                fontFamily: "verdana",
+                fontSize:mobile ? 22:32,
+                paddingTop:20
+            }
+        
         return (
             <Layout>
-                <h1 style={shadow}>Spécialité en rénovation Energetique</h1>
-                <Container style={{ textAlign: 'center'}}>
+                 <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} animationOutDuration={1000} isVisible={true}>
+                    <h1 style={shadow}>Spécialité en rénovation Energetique</h1> 
+                    <Container  style={{ textAlign: 'center'}}>
                     <Grid>
                         <Grid.Row  columns={mobile?2:5}>
                             <Grid.Column style={{ paddingTop: 20 }}>
@@ -41,7 +43,6 @@ export default class Home extends React.Component {
                                     </Card.Content>
                                 </Card>
                             </Grid.Column>
-                      
                        
                             <Grid.Column style={{ paddingTop: 20 }}>
                             <Card color="orange">
@@ -155,8 +156,9 @@ export default class Home extends React.Component {
                                 </Card>
                             </Grid.Column>
                         </Grid.Row>
-                    </Grid>
-                </Container>
+                    </Grid> <br/>    
+                </Container> 
+                </Animated>    
             </Layout>
         )
     }

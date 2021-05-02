@@ -26,7 +26,7 @@ class IndexElectricite extends React.Component {
             textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
             textAlign: "center",
             fontFamily: "verdana",
-            fontSize: 25
+            fontSize: mobile ?15:25
         }
 
         return (

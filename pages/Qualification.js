@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Image, Card, Grid ,Button} from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
-import Fiche from "./Fiche"
 import { createMedia } from '@artsy/fresnel'
 
 
@@ -21,8 +20,7 @@ class IndexQualification extends React.Component {
         this.state = {};
     }
 
-    handleOpen = () => this.setState({ open: true })
-    handleClose = () => this.setState({ open: false })
+    
 
     render() {
         const { mobile } = this.props
@@ -102,15 +100,6 @@ class IndexQualification extends React.Component {
 
                         </Grid.Row>
                     </Grid>
-                    <center>
-                        <Button color="green" fluid onClick={this.handleOpen}><h3>Vérifier mon éligibilité</h3></Button>
-                    </center><br /><br /><br />
-                    <Fiche
-                        open={this.state.open}
-                        onHide={() => this.handleClose()}
-                    />
-
-
                 </Container>
             </Layout>
         )

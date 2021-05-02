@@ -1,9 +1,8 @@
 import React,{Children} from 'react';
-import { Button, Header, Icon, Modal, Grid, Image, Confirm, Form, Dropdown, Checkbox,Segment} from 'semantic-ui-react'
+import {Header,Modal,Form, Dropdown, Checkbox,Segment} from 'semantic-ui-react'
 import * as emailjs from 'emailjs-com'
 import PropTypes from 'prop-types';
-import Layout from "../components/MyLayout"
- 
+import { Animated } from "react-animated-css";
 export default class Fiche extends React.Component {
     constructor(props) {
         super(props);
@@ -70,6 +69,7 @@ export default class Fiche extends React.Component {
         render() {
         const { children } = this.props
         const { mobile } = this.props
+        
         Fiche.propTypes = {
                 mobile: PropTypes.bool
             }
@@ -78,6 +78,7 @@ export default class Fiche extends React.Component {
         
         
         return (
+         
             <Segment inverted>
             <Modal 
                 open={open}
@@ -85,6 +86,7 @@ export default class Fiche extends React.Component {
                 size='mini'
                 basic  
             >
+                   <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} animationOutDuration={1000} isVisible={true}>
                 <Header>
                     Dans le cadre de la transition écologique, l'État prend en charge le coût de l’installation de<br />
                     Des milliers de foyers français en ont déjà profité, pourquoi pas vous ?
@@ -238,8 +240,10 @@ export default class Fiche extends React.Component {
                         Fermer
                    </Form.Button>
                 </Modal.Description>
-            </Modal>
-           </Segment>
+               </Animated>
+            </Modal> 
+           </Segment> 
+            
         )
     }
 }

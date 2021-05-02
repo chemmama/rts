@@ -27,7 +27,7 @@ class IndexPartenaire extends React.Component {
             textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
             textAlign: "center",
             fontFamily: "verdana",
-            fontSize: 25
+            fontSize: mobile?15:25
         }
         return (
             <Layout>
@@ -47,7 +47,7 @@ class IndexPartenaire extends React.Component {
                                 </Grid.Column>
 
                                 <Grid.Column floated='left' width={6} >
-                                    <h1 style={{ fontFamily: "verdana", color: "Green", fontSize: 25 }}>
+                                    <h1 style={{ fontFamily: "verdana", color: "Green", fontSize: mobile?15:25 }}>
                                         La Prime Réno'v ?
                                     </h1>
 
@@ -81,7 +81,7 @@ class IndexPartenaire extends React.Component {
                                 </Grid.Column>
 
                                 <Grid.Column floated='left' width={6} >
-                                    <h1 style={{ fontFamily: "verdana", color: "Green", fontSize: 25 }}>
+                                    <h1 style={{ fontFamily: "verdana", color: "Green", fontSize: mobile?15:25 }}>
                                         Les Certificats d'Économies d'Énergie
                                     </h1>
 
@@ -114,7 +114,7 @@ class IndexPartenaire extends React.Component {
                                 </Grid.Column>
 
                                 <Grid.Column floated='left' width={6} >
-                                    <h1 style={{ fontFamily: "verdana", color: "Green", fontSize: 25 }}>
+                                    <h1 style={{ fontFamily: "verdana", color: "Green", fontSize: mobile?15:25 }}>
                                         Une réponse territoriale aux enjeux de l'habitat privé
                                     </h1>
 
@@ -148,7 +148,7 @@ class IndexPartenaire extends React.Component {
                                 </Grid.Column>
 
                                 <Grid.Column floated='left' width={6}>
-                                    <h1 style={{ fontFamily: "verdana", color: "Green", fontSize: 25 }}>
+                                    <h1 style={{ fontFamily: "verdana", color: "Green", fontSize: mobile?15:25 }}>
                                         L'éco-prêt à taux zéro
                                     </h1>
 
@@ -179,7 +179,7 @@ class IndexPartenaire extends React.Component {
                                 </Grid.Column>
 
                                 <Grid.Column floated='left' width={6}>
-                                    <h1 style={{ fontFamily: "verdana", color: "Green", sizeFont: 25 }}>
+                                    <h1 style={{ fontFamily: "verdana", color: "Green", fontSize: mobile?15:25 }}>
                                         Agir pour la transition écologique Agence de la transition écologique
                                     </h1>
 

@@ -1,8 +1,9 @@
 import React from 'react'
 import { createMedia } from '@artsy/fresnel'
-import { Container, Icon, Image, Menu, Segment, Sidebar, Visibility,Dropdown } from 'semantic-ui-react'
+import { Container, Icon, Image, Menu, Segment, Sidebar, Visibility,Dropdown,Button } from 'semantic-ui-react'
 import PropTypes from 'prop-types';
 import Mobile from "../pages/Mobile.js"
+import Fiche from "./Fiche.js"
 
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
@@ -33,25 +34,37 @@ const shadow2 =
 const html =".html"
 
 
-class DesktopContainer extends React.Component {
 
-    state = { activeItem: '' }
+class DesktopContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+        this.state = { activeItem: '' }
+    }
+   
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+   
     hideFixedMenu = () => this.setState({ fixed: false })
     showFixedMenu = () => this.setState({ fixed: true })
-  
+    
+    handleOpen = () => this.setState({ open: true })
+    handleClose = () => this.setState({ open: false })
+    
     render() {
         const { children } = this.props
         const { activeItem } = this.state
-        const {color}=this.props
+       
 
         DesktopContainer.propTypes = {
             children: PropTypes.node,
         }
-
+       
+        
         return (
+            
             <Container fluid >
+                
                 <Media greaterThan='mobile'>
                     <Visibility
                         once={false}
@@ -59,6 +72,7 @@ class DesktopContainer extends React.Component {
                         onBottomPassedReverse={this.hideFixedMenu}
                     >
                         <Segment vertical style={{backgroundColor:'lightgrey'}}>
+                            
                             <Menu style={{ backgroundColor: 'whitesmoke' }} stackable fluid>
                                 
                                 <Menu.Item><Image src='img/ecolo/rts.png'
@@ -74,7 +88,10 @@ class DesktopContainer extends React.Component {
                                     name='Rénovation Tertiaire Service' 
                                    
                                 />
-
+                                <Menu.Item>
+                                    <Button color ="green" inverted onClick={this.handleOpen}>Verifier votre eligibité</Button>
+                                </Menu.Item>
+                                
                                 <Menu.Item position="right"
                                     name='Nettoyage' href={"/Nettoyage"+html} style={{ fontWeight:"bold"}}
                                     active={activeItem === 'Nettoyage'}
@@ -121,11 +138,15 @@ class DesktopContainer extends React.Component {
                                     active={activeItem === 'Qualification'}
                                     onClick={this.handleItemClick}
                                 />
+                                
                             </Menu>
+                            
                         </Segment>
                     </Visibility>
                     {children}
                 </Media>
+               {this.state.open===true?<Fiche open={this.state.open} onHide={() => this.handleClose()}/>:null}
+             
             </Container>
 
         )
@@ -138,8 +159,12 @@ class MobileContainer extends React.Component {
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
     handleSidebarHide = () => this.setState({ sidebarOpened: false })
+    
     handleToggle = () => this.setState({ sidebarOpened: true })
-
+    
+    handleOpen = () => this.setState({ open: true })
+    handleClose = () => this.setState({ open: false })
+   
     render() {
         const { children } = this.props
         const { sidebarOpened, activeItem } = this.state
@@ -158,7 +183,9 @@ class MobileContainer extends React.Component {
                         vertical
                         visible={sidebarOpened}
                     >
-                       
+                        <Menu.Item>
+                            <Button color="green" inverted onClick={this.handleOpen}>Verifier votre eligibité</Button>
+                        </Menu.Item>
                         <Menu.Item
                             name='Nettoyage' href={"/Nettoyage" + html} style={{ fontWeight: "bold" }}
                             active={activeItem === 'Nettoyage'}
@@ -223,6 +250,7 @@ class MobileContainer extends React.Component {
                                 </Menu>
                             </Container>
                             <Mobile mobile />
+                            {this.state.open === true ? <Fiche open={this.state.open} onHide={() => this.handleClose()} /> : null}
                         </Segment>
                         {children}
                     </Sidebar.Pusher>
