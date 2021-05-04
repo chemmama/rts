@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Image, Grid, Segment, Embed,Item ,Card} from 'semantic-ui-react'
+import { Container, Image, Grid, Segment, Embed,Item ,Card,Form,Dropdown,Checkbox} from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
 import Contact from './Contact'
 import * as emailjs from 'emailjs-com'
@@ -145,8 +145,151 @@ class IndexPac extends React.Component {
                                     </Item>
 
                                 </Grid.Column>
+                                <Grid.Column floated='right' width={8} style={{ paddingTop: mobile ? 10 : 20, fontFamily: "Comic sans MS", backgroundColor: "white" }}>
+                                    Dans le cadre de la transition écologique, l'État prend en charge le coût de l’installation de
+                                   <br />
+                                    Des milliers de foyers français en ont déjà profité, pourquoi pas vous ?
+                <p style={{ color: 'red' }}>* saisie obligatoire</p>
+                                    <p style={{ fontFamily: "Comic sans MS", color: "green", fontSize: mobile ? 20 : 30, textAlign: "center" }}>
+                                        Vérifiez votre éligibité</p>
 
-                                <Contact/>
+                                    <Form onSubmit={e => this.handleSubmit(e)}>
+                                        <Form.Field
+                                            error={this.state.errorProprio}
+                                            required
+                                            label="Vous Etes"
+                                            placeholder="----"
+                                            fluid
+                                            options={proprio}
+                                            control={Dropdown}
+                                            name="proprio"
+                                            onChange={this.handleChange}
+
+                                        />
+
+                                        <Form.Field
+                                            error={this.state.errorSalarie}
+                                            required
+                                            label="Vous Etes salarié dans"
+                                            placeholder="----"
+                                            fluid
+                                            options={salarie}
+                                            control={Dropdown}
+                                            name="salarie"
+                                            onChange={this.handleChange}
+
+                                        />
+                                        <Form.Field clearable
+                                            error={this.state.errorChauffage}
+                                            required
+                                            label="Votre type de Chauffage"
+                                            placeholder="----"
+                                            fluid
+                                            options={chauffage}
+                                            control={Dropdown}
+                                            name="chauffage"
+                                            onChange={this.handleChange}
+                                        />
+
+                                        <Form.Field clearable
+                                            error={this.state.errorFamille}
+                                            required
+                                            label="Nombre de personne vivant dans le foyer"
+                                            placeholder="----"
+                                            fluid
+                                            options={famille}
+                                            control={Dropdown}
+                                            name="famille"
+                                            onChange={this.handleChange}
+                                        />
+
+                                        <Form.Field clearable
+                                            error={this.state.errorFiscalite}
+                                            required
+                                            label="Revenue fiscal de référence (2020 ou 2019)"
+                                            placeholder="----"
+                                            fluid
+                                            options={fiscalite}
+                                            control={Dropdown}
+                                            name="fiscalite"
+                                            onChange={this.handleChange}
+                                        />
+
+                                        <Form.Group>
+                                            <Form.Input
+                                                required
+                                                label='Nom'
+                                                placeholder="Nom"
+                                                width={9}
+                                                name="nom"
+                                                value={this.state.nom}
+                                                onChange={this.handleChange}
+                                            />
+                                            <Form.Input
+                                                icon='lock'
+                                                iconPosition='left'
+                                                required
+                                                label='Prénom'
+                                                placeholder='Prénom'
+                                                width={9}
+                                                name="prenom"
+                                                value={this.state.prenom}
+                                                onChange={this.handleChange}
+                                            />
+                                        </Form.Group>
+
+                                        <Form.Group>
+                                            <Form.Input
+                                                required
+                                                icon="adress"
+                                                iconPosition='left'
+                                                label="Adresse"
+                                                placeholder='Adresse'
+                                                width={9}
+                                                name="adresse"
+                                                value={this.state.adresse}
+                                                onChange={this.handleChange}
+                                            />
+                                            <Form.Input
+                                                required
+                                                label='Localité'
+                                                placeholder='Localité'
+                                                width={9}
+                                                name="localite"
+                                                value={this.state.localite}
+                                                onChange={this.handleChange}
+                                            />
+                                        </Form.Group>
+                                        <Form.Group>
+                                            <Form.Input type="email"
+                                                required
+                                                label='Email'
+                                                placeholder='contact@gmail.com'
+                                                width={9}
+                                                name="email"
+                                                value={this.state.email}
+                                                onChange={this.handleChange}
+                                            />
+                                            <Form.Input
+                                                required
+                                                label='Telephone'
+                                                placeholder='0698611372'
+                                                width={9}
+                                                name="telephone"
+                                                value={this.state.telephone}
+                                                onChange={this.handleChange}
+                                            />
+                                        </Form.Group><br /><br />
+                                        <Form.Field>
+                                            <Checkbox label="J'autorise R.T.S à me recontacter pour me communiquer mon statut d'éligibilité" />
+                                        </Form.Field><br /><br />
+                                        <Form.Button fluid type="submit" color="green" style={{
+                                            fontSize: mobile ? 15 : 20
+                                        }}>
+                                            Vérifier mon éligibilité</Form.Button>
+                                    </Form>
+
+                                </Grid.Column>
                             </Grid.Row>
                         </Grid>
                     </Segment>

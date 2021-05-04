@@ -42,9 +42,40 @@ const { MediaContextProvider, Media } = createMedia({
         }
         return (
             <Layout>
-                <Container style={{ letterSpacing: 3, paddingTop: 30 }}>
+                <Container style={{ letterSpacing: 3, paddingTop: 30,textAlign:"center" }}>
                     <Segment>
-                        <center><strong style={shadow}>Néttoyage </strong></center>
+                        <Grid>
+                            <Grid.Row columns={mobile ? 3: 6}>
+                                <Grid.Column>
+                                    <Image src="img/nettoyage/certificat.png" spaced size="tiny"/>
+                                    <br/>Certificat
+                                </Grid.Column>
+                                
+                                <Grid.Column>
+                                    <Image src="img/nettoyage/competence.png" spaced size="tiny"/>
+                                    <br/>Compétence
+                                </Grid.Column>
+                                
+                                <Grid.Column>  
+                                    <Image src="img/nettoyage/devis.jpg" spaced size="tiny"/>
+                                    <br/>Devis rapide 
+                                </Grid.Column>
+
+                                <Grid.Column>      
+                                    <Image src="img/nettoyage/rapidite.png" spaced size="tiny"/>
+                                    <br/>Rapidité
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Image src="img/nettoyage/telephone.png" spaced size="tiny"/>
+                                    <br/>Contact
+                                </Grid.Column>
+                                <Grid.Column>
+                                <Image src="img/nettoyage/vehicule.png" spaced size="tiny"/>
+                                    <br/>Déplacement
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
+                       
                     </Segment>
                     <h2 style={{ fontFamily: "Comic Sans MS", textAlign: 'center' }}>RTS – Le nettoyage adapté a vos besoin</h2>
 

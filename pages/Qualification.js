@@ -34,69 +34,69 @@ class IndexQualification extends React.Component {
             fontSize: mobile ? 22 : 32
         }
 
-        return (
-            <Layout>
-                
-                <h1 style={shadow}>Nos qualifications RGE<Image src='img/rge/Bandeau-RGE-chantier-par-chantier.png' spaced size="medium" /></h1>
-                <Container style={{ textAlign: 'center' }}>
-                    
-                    <Grid divided='vertically'>
-                        <Grid.Row columns={mobile ? 2 : 4}>
-                            <Grid.Column>
-                                <Card>
-                                    <Image src='img/rge/logo-QualiPAC-2021-RGE.png' wrapped ui={false} />
-                                    <Card.Content>
-                                        <Card.Header>Chauffage et ECS</Card.Header>
+    return (
+        <Layout>
+            <Container style={{ textAlign: 'center' }}>
+                <h1 style={shadow}>Nos qualifications RGE et Partenaires</h1>
+                    <Image src="img/marque.jpg" centered spaced/>
+                    <Image src='img/rge/Bandeau-RGE-chantier-par-chantier.png' spaced size="medium" />
+                        <Grid divided='vertically'>
+                            <Grid.Row columns={mobile ? 2 : 4}>
+                                <Grid.Column>
+                                    <Card>
+                                        <Image src='img/rge/logo-QualiPAC-2021-RGE.png' wrapped ui={false} />
+                                        <Card.Content>
+                                            <Card.Header>Chauffage et ECS</Card.Header>
 
-                                        <Card.Description>
-                                            <strong style={{ color: "purple" }}>QualiPAC, la qualification RGE pour l'installation de pompes à chaleur</strong><br /><br /><br /><br /><br />
-                                        </Card.Description>
-                                    </Card.Content>
+                                            <Card.Description>
+                                                <strong style={{ color: "purple" }}>QualiPAC, la qualification RGE pour l'installation de pompes à chaleur</strong><br /><br /><br /><br /><br />
+                                            </Card.Description>
+                                        </Card.Content>
 
-                                </Card>
-                            </Grid.Column>
+                                    </Card>
+                                </Grid.Column>
 
 
-                            <Grid.Column>
-                                <Card>
-                                    <Image src='img/rge/logo-QualiPV-2021-RGE.png' wrapped ui={false} />
-                                    <Card.Content>
-                                        <Card.Header>QualiPV</Card.Header>
-                                        <Card.Description>
-                                            <strong style={{ color: "blue" }}>QualiPV, la qualification de l'installation des systèmes solaires photovoltaïques</strong><br /><br /><br /><br />
+                                <Grid.Column>
+                                    <Card>
+                                        <Image src='img/rge/logo-QualiPV-2021-RGE.png' wrapped ui={false} />
+                                        <Card.Content>
+                                            <Card.Header>QualiPV</Card.Header>
+                                            <Card.Description>
+                                                <strong style={{ color: "blue" }}>QualiPV, la qualification de l'installation des systèmes solaires photovoltaïques</strong><br /><br /><br /><br />
 
-                                        </Card.Description>
-                                    </Card.Content>
-                                </Card>
-                            </Grid.Column>
+                                            </Card.Description>
+                                        </Card.Content>
+                                    </Card>
+                                </Grid.Column>
 
-                            <Grid.Column>
-                                <Card>
-                                    <Image src='img/rge/logo-Qualisol-2021-RGE.png' wrapped ui={false} />
-                                    <Card.Content>
-                                        <Card.Header>Qualisol</Card.Header>
-                                        <Card.Description>
-                                            <strong style={{ color: 'orangered' }}>Qualisol, la qualification RGE de l'installation de systèmes solaires thermiques</strong><br /><br /><br /><br/>
+                                <Grid.Column>
+                                    <Card>
+                                        <Image src='img/rge/logo-Qualisol-2021-RGE.png' wrapped ui={false} />
+                                        <Card.Content>
+                                            <Card.Header>Qualisol</Card.Header>
+                                            <Card.Description>
+                                                <strong style={{ color: 'orangered' }}>Qualisol, la qualification RGE de l'installation de systèmes solaires thermiques</strong><br /><br /><br /><br/>
 
-                                        </Card.Description>
-                                    </Card.Content>
-                                </Card>
-                            </Grid.Column>
+                                            </Card.Description>
+                                        </Card.Content>
+                                    </Card>
+                                </Grid.Column>
 
-                            <Grid.Column>
-                                <Card>
-                                    <Image src='img/rge/qualibat.png' />
-                                    <Card.Content>
-                                        <Card.Header>Qualibat</Card.Header>
-                                        <Card.Description><strong style={{color:"blueviolet"}}>
-                                            A travers nos labels de qualification et de certification, 
-                                            nous valorisons une sélection d’entreprises de toutes spécialités 
-                                            et de toutes tailles ayant fait preuve de leurs compétences et de 
-                                            leur savoir-faire.</strong>
-                                        </Card.Description>
-                                    </Card.Content>
-                                </Card>
-                            </Grid.Column>
+                                <Grid.Column>
+                                    <Card>
+                                        <Image src='img/rge/qualibat.png' />
+                                        <Card.Content>
+                                            <Card.Header>Qualibat</Card.Header>
+                                            <Card.Description><strong style={{color:"blueviolet"}}>
+                                                A travers nos labels de qualification et de certification, 
+                                                nous valorisons une sélection d’entreprises de toutes spécialités 
+                                                et de toutes tailles ayant fait preuve de leurs compétences et de 
+                                                leur savoir-faire.</strong>
+                                            </Card.Description>
+                                        </Card.Content>
+                                    </Card>
+                                </Grid.Column>
 
                         </Grid.Row>
                     </Grid>

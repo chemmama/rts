@@ -26,10 +26,10 @@ export default class Contact extends React.Component {
         this.state.famille === undefined ? this.setState({ errorFamille: { content: "", pointing: null } }) : this.setState({ errorFamille: null })
         this.state.fiscalite === undefined ? this.setState({ errorFiscalite: { content: "", pointing: null } }) : this.setState({ errorFiscalite: null })
         this.state.proprio === undefined ? alert("Selectionnez Proprietaire ou locataire ?") :
-            this.state.salarie === undefined ? alert("Selectionnez votre type de salaire") :
-                this.state.chauffage === undefined ? alert("Selectionnez votre type de chauffage") :
-                    this.state.famille === undefined ? alert("Selectionnez nombre de personne") :
-                        this.state.fiscalité === undefined ? alert("Selectionnez votre revenu fiscal") :this.dataContact()
+        this.state.salarie === undefined ? alert("Selectionnez votre type de salaire") :
+        this.state.chauffage === undefined ? alert("Selectionnez votre type de chauffage") :
+        this.state.famille === undefined ? alert("Selectionnez nombre de personne") :
+        this.state.fiscalité === undefined ? alert("Selectionnez votre revenu fiscal") :this.dataContact()
     }
 
     dataContact() {
