@@ -82,7 +82,7 @@ export default class Home extends React.Component {
                                                 <Image src="img/ecolo/RGE.png" size='mini' />
                                             </Card.Header>
                                             <Card.Description>
-                                                <Link href="/Climatisation"><a style={{ color: "green", fontWeight: "bold" }}>Climatisation</a></Link>
+                                                <Link href="/AirAir"><a style={{ color: "green", fontWeight: "bold" }}>Climatisation</a></Link>
                                             </Card.Description>
                                         </Card.Content>
                                 </Card>
@@ -113,7 +113,7 @@ export default class Home extends React.Component {
                                                 <Image src="img/ecolo/RGE.png" size='mini' />
                                             </Card.Header>
                                             <Card.Description>
-                                                <Link href="/Ballon"><a style={{ color: "green", fontWeight: "bold" }}>Ballon Solaire</a></Link>
+                                                <Link href="/BallonSolaire"><a style={{ color: "green", fontWeight: "bold" }}>Ballon Solaire</a></Link>
                                             </Card.Description>
                                         </Card.Content>
                                 </Card>

@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/-AuheEk924-BHx-dnPDNY/_buildManifest.js",
-    "static/-AuheEk924-BHx-dnPDNY/_ssgManifest.js"
+    "static/gPffcMKG7j3dzIWZDwKwf/_buildManifest.js",
+    "static/gPffcMKG7j3dzIWZDwKwf/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -19,7 +19,7 @@
       "static/chunks/3181e2665065079f1bfb9837193c938f09508251.0f2fa40decd4500ddfe9.js",
       "static/chunks/8392e461946f1a73eb3e2e5cf877f6700704472e.68cd7dc6d26c96cd1b6f.js",
       "static/chunks/abdf19f50cb44d3d604d0b5b9d156818f389d96e.91b6d8c3db3f29d27cac.js",
-      "static/chunks/915582667b050498f9cdec7c784299989f104c20.4ab3a52a0eedcb8bf8a0.js",
+      "static/chunks/915582667b050498f9cdec7c784299989f104c20.333f9d84c42462d68322.js",
       "static/chunks/pages/index-37a5caa6c2fe8fa9af6e.js"
     ],
     "/AirAir": [
@@ -101,7 +101,7 @@
       "static/chunks/3181e2665065079f1bfb9837193c938f09508251.0f2fa40decd4500ddfe9.js",
       "static/chunks/8392e461946f1a73eb3e2e5cf877f6700704472e.68cd7dc6d26c96cd1b6f.js",
       "static/chunks/abdf19f50cb44d3d604d0b5b9d156818f389d96e.91b6d8c3db3f29d27cac.js",
-      "static/chunks/915582667b050498f9cdec7c784299989f104c20.4ab3a52a0eedcb8bf8a0.js",
+      "static/chunks/915582667b050498f9cdec7c784299989f104c20.333f9d84c42462d68322.js",
       "static/chunks/pages/Home-c767fe658a5b73542242.js"
     ],
     "/Ite": [
