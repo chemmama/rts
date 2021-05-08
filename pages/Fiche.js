@@ -83,13 +83,17 @@ export default class Fiche extends React.Component {
             <Modal 
                 open={open}
                 onClose={this.props.handleClose}
-                size='mini'
                 basic  
             >
-                   <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} animationOutDuration={1000} isVisible={true}>
-                <Header>
+            <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} animationOutDuration={1000} isVisible={true}>
+                <Form.Button color='greylight' fluid onClick={this.props.onHide} inverted style={{
+                        fontSize: mobile ? 15 : 20}}>Fermer
+                </Form.Button>
+                
+                <Header style={{color:"white"}}>
                     Dans le cadre de la transition écologique, l'État prend en charge le coût de l’installation de<br />
                     Des milliers de foyers français en ont déjà profité, pourquoi pas vous ?
+                   
                     <p style={{ color: 'red' }}>* saisie obligatoire</p>
                 </Header>   
 
@@ -163,20 +167,22 @@ export default class Fiche extends React.Component {
 
                         <Form.Group>
                             <Form.Input
+                                icon='user'
+                                iconPosition='left'
                                 required
                                 label='Nom'
-                                placeholder="----" style={{ color: "yellow" }}
+                                placeholder="----" 
                                 width={9}
                                 name="nom"
                                 value={this.state.nom}
                                 onChange={this.handleChange}
                             />
                             <Form.Input
-                                icon='lock'
+                                icon='user'
                                 iconPosition='left'
                                 required
                                 label='Prénom'
-                                placeholder='----' style={{ color: "yellow" }}
+                                placeholder='----'  
                                 width={9}
                                 name="prenom"
                                 value={this.state.prenom}
@@ -186,20 +192,22 @@ export default class Fiche extends React.Component {
 
                         <Form.Group>
                             <Form.Input
-                                required
-                                icon="adress"
+                                icon='home'
                                 iconPosition='left'
+                                required
                                 label="Adresse"
-                                placeholder='----' style={{ color: "yellow" }}
+                                placeholder='----'  
                                 width={9}
                                 name="adresse"
                                 value={this.state.adresse}
                                 onChange={this.handleChange}
                             />
                             <Form.Input
+                                icon='street view'
+                                iconPosition='left'
                                 required
                                 label='Localité'
-                                placeholder='----' style={{ color: "yellow" }}
+                                placeholder='----'  
                                 width={9}
                                 name="localite"
                                 value={this.state.localite}
@@ -208,18 +216,22 @@ export default class Fiche extends React.Component {
                         </Form.Group>
                         <Form.Group>
                             <Form.Input type="email"
+                                icon='at'
+                                iconPosition='left'
                                 required
                                 label='Email'
-                                placeholder='contact@gmail.com' style={{ color: "yellow" }}
+                                placeholder='contact@gmail.com' 
                                 width={9}
                                 name="email"
                                 value={this.state.email}
                                 onChange={this.handleChange}
                             />
                             <Form.Input
+                                icon='text telephone'
+                                iconPosition='left'
                                 required
                                 label='Telephone'
-                                placeholder='----' style={{ color: "yellow" }}
+                                placeholder='----'  
                                 width={9}
                                 name="telephone"
                                 value={this.state.telephone}

@@ -10,15 +10,17 @@ export default class Header extends React.Component {
     }
 
     render() {
+        const { nom } = this.props
         return (
             <div>
                 <head>
-                    <title>renovation</title>
+                    <title>Rénovation Tertiaire Service</title>
                     <meta name="description" content="renovation tertiaire service" />
                     <meta name="author" content="emile chemmama" />
                     <meta name="viewport" content="minimum-scale=1,initial-scale=1.0, width=device-width" />
                     <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-                    <meta name="keywords" content="pompe a chaleur,plomberie,electricite,salle de bain" />
+                    <meta name="keywords" content="pompe a chaleur,plomberie,electricite,salle de bain,batiment,isolation
+                    ,climatisation" />
 
 
                     <link async rel="stylesheet" link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.0.3/dist/semantic.min.css" />
@@ -36,7 +38,7 @@ export default class Header extends React.Component {
 
                     </script>
                 </head>
-                <MyMenu />
+                <MyMenu/>
             </div>
         )
     }

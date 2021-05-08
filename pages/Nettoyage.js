@@ -1,8 +1,9 @@
-import { urlObjectKeys } from "next/dist/next-server/lib/utils";
+
 import React from "react";
 import { Image, Container, Grid, Segment, Accordion, Icon } from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
 import { createMedia } from '@artsy/fresnel'
+
 
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
@@ -77,7 +78,7 @@ const { MediaContextProvider, Media } = createMedia({
                         </Grid>
                        
                     </Segment>
-                    <h2 style={{ fontFamily: "Comic Sans MS", textAlign: 'center' }}>RTS – Le nettoyage adapté a vos besoin</h2>
+                    <h2 style={{ fontFamily: "Comic Sans MS"}}>RTS – Le nettoyage adapté a vos besoin</h2>
 
                     <Accordion styled fluid >
                         <Accordion.Title
@@ -334,7 +335,6 @@ const { MediaContextProvider, Media } = createMedia({
                             </li><br />
                         </ul> 
                     </p>
-                         
                         </Accordion.Content>
                     </Accordion>
                 </Container>

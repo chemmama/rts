@@ -128,7 +128,6 @@ class MobileQualification extends React.Component {
 }
 
 export default class Qualification extends React.Component {
-
     render() {
         return (
             <div>

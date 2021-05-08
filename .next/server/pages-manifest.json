@@ -19,6 +19,7 @@
   "/Plomberie": "pages/Plomberie.html",
   "/Qualification": "pages/Qualification.html",
   "/Revetement": "pages/Revetement.html",
+  "/Route": "pages/Route.js",
   "/": "pages/index.html",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
