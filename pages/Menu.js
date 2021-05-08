@@ -1,6 +1,6 @@
 import React from 'react'
 import { createMedia } from '@artsy/fresnel'
-import { Container, Icon, Image, Menu, Segment, Sidebar, Visibility,Dropdown,Button } from 'semantic-ui-react'
+import { Container, Icon, Image, Menu, Segment, Sidebar, Visibility, Dropdown, Button } from 'semantic-ui-react'
 import PropTypes from 'prop-types';
 import Mobile from "../pages/Mobile.js"
 import Fiche from "./Fiche.js"
@@ -22,7 +22,7 @@ const shadow =
     textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
     fontFamily: "Comic Sans MS",
     fontSize: 17,
-    textAlign:"center" 
+    textAlign: "center"
 }
 
 const shadow2 =
@@ -34,7 +34,7 @@ const shadow2 =
     fontSize: 11
 }
 
-const html =""
+const html = ".html"
 
 class DesktopContainer extends React.Component {
     constructor(props) {
@@ -45,29 +45,29 @@ class DesktopContainer extends React.Component {
 
     componentWillMount() {
         if (typeof window !== 'undefined') {
-        console.log('window.location.pathname', window.location.pathname);
-        this.setState({route:window.location.pathname}) 
+            console.log('window.location.pathname', window.location.pathname);
+            this.setState({ route: window.location.pathname })
         }
     }
-  
+
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-   
+
     hideFixedMenu = () => this.setState({ fixed: false })
     showFixedMenu = () => this.setState({ fixed: true })
-    
+
     handleOpen = () => this.setState({ open: true })
     handleClose = () => this.setState({ open: false })
-    
+
 
     render() {
         const { children } = this.props
-        const { activeItem ,route} = this.state
-        
- 
+        const { activeItem, route } = this.state
+
+
         DesktopContainer.propTypes = {
             children: PropTypes.node,
         }
-      
+
         return (
             <Container fluid >
                 <Media greaterThan='mobile'>
@@ -76,72 +76,72 @@ class DesktopContainer extends React.Component {
                         onBottomPassed={this.showFixedMenu}
                         onBottomPassedReverse={this.hideFixedMenu}
                     >
-                    <Segment vertical style={{backgroundColor:'lightgrey'}}>
-                        <Menu style={{ backgroundColor: 'whitesmoke' }} stackable fluid>
-                            <Menu.Item>
-                                <Image src='img/ecolo/rts.png'as='a'size='tiny'href='/'/>
-                            </Menu.Item>
-                            
-                            <Menu.Item 
-                                inverted style={shadow} name='Rénovation Tertiaire Service'>
-                            </Menu.Item>
-                            
-                            <Menu.Item>
-                                    {route === '/Nettoyage' ? <Image src='img/ecolo/rts.png' as='a' size='tiny'/>:<Button color ="green" inverted
-                                onClick={this.handleOpen}>Verifier votre eligibité</Button>}
-                            </Menu.Item>
-                            
-                            <Menu.Item position="right"
-                                name='Nettoyage' href={"/Nettoyage"+html} style={{ fontWeight:"bold"}}
-                                active={activeItem === 'Nettoyage'}
-                                onClick={this.handleItemClick}>
-                                <Image src="img/new1.png" size="mini"/>
-                                       Nettoyage 
-                            </Menu.Item>
-                            
-                            <Dropdown item text='R.G.E'simple style={{fontWeight:"bold"}}>
-                                <Dropdown.Menu>
-                                    <Dropdown.Item Link href={"/Pac"+html}>Pac air eau</Dropdown.Item>
-                                    <Dropdown.Item Link href={"/Ite"+html}>Isolation exterieur</Dropdown.Item>
-                                    <Dropdown.Item Link href={"/Iti"+html}>Isolation interieur</Dropdown.Item>
-                                    <Dropdown.Item Link href={"/AirAir"+html}>Pac air air</Dropdown.Item>
-                                    <Dropdown.Item Link href={"/Photovoltaique"+html}>Photovoltaique</Dropdown.Item>
-                                    <Dropdown.Item Link href={"/BallonSolaire"+html}>Ballon Solaire</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                            <Dropdown item text='Le Batiment' simple style={{ fontWeight: "bold" }} >
-                                <Dropdown.Menu>
-                                    <Dropdown.Item Link href={"/Electricite"+html}>Electricité</Dropdown.Item>
-                                    <Dropdown.Item Link href={"/Plomberie"+html}>Plomberie</Dropdown.Item>
-                                    <Dropdown.Item Link href={"/Revetement"+html}>Revetement sol</Dropdown.Item>
-                                    <Dropdown.Item Link href={"/Cloison"+html}>Cloison bureau</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                            
-                            <Menu.Item style={{fontWeight: "bold" }}
-                                name='Nos Partenaires' href={"/Partenaire"+html}
-                                active={activeItem === 'Nos Partenaires'}
-                                onClick={this.handleItemClick}
-                            />
+                        <Segment vertical style={{ backgroundColor: 'lightgrey' }}>
+                            <Menu style={{ backgroundColor: 'whitesmoke' }} stackable fluid>
+                                <Menu.Item>
+                                    <Image src='img/ecolo/rts.png' as='a' size='tiny' href='/' />
+                                </Menu.Item>
 
-                            <Menu.Item
-                                name='Qui sommes nous' href={"/Mission"+html}style={{fontWeight: "bold" }}
-                                active={activeItem === 'Qui sommes nous'}
-                                onClick={this.handleItemClick}
-                            />
-                        
+                                <Menu.Item
+                                    inverted style={shadow} name='Rénovation Tertiaire Service'>
+                                </Menu.Item>
 
-                            <Menu.Item
-                                name='Qualification' href={"/Qualification"+html} style={{fontWeight: "bold" }}
-                                active={activeItem === 'Qualification'}
-                                onClick={this.handleItemClick}
-                            />
-                        </Menu>
-                    </Segment>
+                                <Menu.Item>
+                                    {route === '/Nettoyage'+html ? <Image src='img/ecolo/rts.png' as='a' size='tiny' /> : <Button color="green" inverted
+                                        onClick={this.handleOpen}>Verifier votre eligibité</Button>}
+                                </Menu.Item>
+
+                                <Menu.Item position="right"
+                                    name='Nettoyage' href={"/Nettoyage" + html} style={{ fontWeight: "bold" }}
+                                    active={activeItem === 'Nettoyage'}
+                                    onClick={this.handleItemClick}>
+                                    <Image src="img/new1.png" size="mini" />
+                                       Nettoyage
+                            </Menu.Item>
+
+                                <Dropdown item text='R.G.E' simple style={{ fontWeight: "bold" }}>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item Link href={"/Pac" + html}>Pac air eau</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Ite" + html}>Isolation exterieur</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Iti" + html}>Isolation interieur</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/AirAir" + html}>Pac air air</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Photovoltaique" + html}>Photovoltaique</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/BallonSolaire" + html}>Ballon Solaire</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                                <Dropdown item text='Le Batiment' simple style={{ fontWeight: "bold" }} >
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item Link href={"/Electricite" + html}>Electricité</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Plomberie" + html}>Plomberie</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Revetement" + html}>Revetement sol</Dropdown.Item>
+                                        <Dropdown.Item Link href={"/Cloison" + html}>Cloison bureau</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+
+                                <Menu.Item style={{ fontWeight: "bold" }}
+                                    name='Nos Partenaires' href={"/Partenaire" + html}
+                                    active={activeItem === 'Nos Partenaires'}
+                                    onClick={this.handleItemClick}
+                                />
+
+                                <Menu.Item
+                                    name='Qui sommes nous' href={"/Mission" + html} style={{ fontWeight: "bold" }}
+                                    active={activeItem === 'Qui sommes nous'}
+                                    onClick={this.handleItemClick}
+                                />
+
+
+                                <Menu.Item
+                                    name='Qualification' href={"/Qualification" + html} style={{ fontWeight: "bold" }}
+                                    active={activeItem === 'Qualification'}
+                                    onClick={this.handleItemClick}
+                                />
+                            </Menu>
+                        </Segment>
                     </Visibility>
-                        {children}
+                    {children}
                 </Media>
-                    {this.state.open===true?<Fiche open={this.state.open} onHide={() => this.handleClose()}/>:null}
+                {this.state.open === true ? <Fiche open={this.state.open} onHide={() => this.handleClose()} /> : null}
             </Container>
 
         )
@@ -164,15 +164,15 @@ class MobileContainer extends React.Component {
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
     handleSidebarHide = () => this.setState({ sidebarOpened: false })
-    
+
     handleToggle = () => this.setState({ sidebarOpened: true })
-    
+
     handleOpen = () => this.setState({ open: true })
     handleClose = () => this.setState({ open: false })
-   
+
     render() {
         const { children } = this.props
-        const { sidebarOpened, activeItem ,route} = this.state
+        const { sidebarOpened, activeItem, route } = this.state
 
         MobileContainer.propTypes = {
             children: PropTypes.node,
@@ -188,14 +188,14 @@ class MobileContainer extends React.Component {
                         vertical
                         visible={sidebarOpened}>
                         <Menu.Item>
-                            {route === '/Nettoyage' ?null: <Button color="green" inverted
-                            onClick={this.handleOpen}>Verifier votre eligibité</Button>}
+                            {route === '/Nettoyage'+html ? null : <Button color="green" inverted
+                                onClick={this.handleOpen}>Verifier votre eligibité</Button>}
                         </Menu.Item>
                         <Menu.Item
                             name='Nettoyage' href={"/Nettoyage" + html} style={{ fontWeight: "bold" }}
                             active={activeItem === 'Nettoyage'}
                             onClick={this.handleItemClick}>
-                                <Image src="img/new1.png" size="mini" />
+                            <Image src="img/new1.png" size="mini" />
                                        Nettoyage
                         </Menu.Item>
 
@@ -209,7 +209,7 @@ class MobileContainer extends React.Component {
                                 <Dropdown.Item Link href={"/BallonSolaire" + html}>Ballon Solaire</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
-                        <Dropdown item text='Le Batiment'pointing="left" style={{ fontWeight: "bold" }} >
+                        <Dropdown item text='Le Batiment' pointing="left" style={{ fontWeight: "bold" }} >
                             <Dropdown.Menu>
                                 <Dropdown.Item Link href={"/Electricite" + html}>Electricité</Dropdown.Item>
                                 <Dropdown.Item Link href={"/Plomberie" + html}>Plomberie</Dropdown.Item>
@@ -235,7 +235,7 @@ class MobileContainer extends React.Component {
                             active={activeItem === 'Qualification'}
                             onClick={this.handleItemClick}
                         />
-                     
+
                     </Sidebar>
                     <Sidebar.Pusher dimmed={sidebarOpened}>
                         <Segment
@@ -262,14 +262,14 @@ class MobileContainer extends React.Component {
         )
     }
 }
-const MyMenu =({children})=> (
+const MyMenu = ({ children }) => (
     <div>
         <MediaContextProvider>
-                    <DesktopContainer>{children}</DesktopContainer>
-                    <MobileContainer>{children}</MobileContainer>
+            <DesktopContainer>{children}</DesktopContainer>
+            <MobileContainer>{children}</MobileContainer>
         </MediaContextProvider>
     </div>
 
 )
-    
- export default MyMenu
+
+export default MyMenu
