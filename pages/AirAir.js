@@ -186,6 +186,12 @@ class IndexAirAir extends React.Component {
                                     <strong><mark>Un seul appareil pour tous vos besoins chaud et froid :</mark></strong><br />
                                     Le système va produire le chauffage , pourra également climatiser vos pièces
                                     en période estivale <br />
+                                    
+                                    <strong><mark>Le confort:</mark></strong><br />
+                                    Ultra-silencieux, à partir de 19 dB(6), qui se font oublier pour une vie au calme.
+                                    Une qualité de l’air améliorée en luttant contre les bactéries et les 
+                                    allergènes de façon plus efficace <br />
+
                                 </Card.Description>
                             </Card.Content>
                         </Card>
@@ -215,19 +221,10 @@ class IndexAirAir extends React.Component {
                                             intérieur de façon à le chauffer ou le rafraichir.
                                             <br />
 
-                                    <strong><mark>la climatisation froid seul :</mark></strong><br />
-                                            La climatisation froid seul appelée aussi pompe à chaleur air-air évacue
-                                            les calories de l'air intérieur vers l'extérieur. Sa fonction est de
-                                            rafraîchir et réguler le taux d'hygrométrie. Etant donné le faible écart de
-                                            prix avec les systèmes réversibles, elle est de moins en moins utilisée.
-                                            Elle trouve surtout son utilité dans des locaux techniques qui ont besoin
-                                            d'être rafraîchis en été comme en hiver (locaux informatiques...)<br />
-
-                                    <strong><mark>la climatisation chaud seul :</mark></strong><br />
-                                            Les pompes à chaleur air/air en chaud seul sont destinés aux habitations neuves devant
-                                             répondre à la RT2012. Il s’agit ni plus ni moins que d’une climatisation réversible qui
-                                             est bloqué mécaniquement en mode chaud.<br />
-
+                                    <strong><mark>Des appareils éco-responsables :</mark></strong><br />
+                                            grâce à son fluide frigorigène, le R-32, votre appareil possède une meilleure
+                                            capacité thermique que le R-410A. Réfrigérant à composant unique, il est plus facile 
+                                            à manipuler, à récupérer et à recycler(5)<br />
 
 
                                 </Card.Description>

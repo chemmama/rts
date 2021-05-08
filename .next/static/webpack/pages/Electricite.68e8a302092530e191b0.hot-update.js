@@ -1,0 +1,532 @@
+webpackHotUpdate_N_E("pages/Electricite",{
+
+/***/ "./pages/Electricite.js":
+/*!******************************!*\
+  !*** ./pages/Electricite.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Electricite; });
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/next/node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/next/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/next/node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/next/node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/next/node_modules/@babel/runtime/helpers/esm/inherits */ "./node_modules/next/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/next/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/next/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/next/node_modules/@babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/next/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! semantic-ui-react */ "./node_modules/semantic-ui-react/dist/es/index.js");
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
+/* harmony import */ var _artsy_fresnel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @artsy/fresnel */ "./node_modules/@artsy/fresnel/dist/index.js");
+/* harmony import */ var _artsy_fresnel__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_artsy_fresnel__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\famil\\Desktop\\emile programmation\\site_emile\\renovation\\pages\\Electricite.js";
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+
+
+var _createMedia = Object(_artsy_fresnel__WEBPACK_IMPORTED_MODULE_9__["createMedia"])({
+  breakpoints: {
+    mobile: 0,
+    tablet: 768,
+    computer: 1024,
+    ecran: 1192
+  }
+}),
+    MediaContextProvider = _createMedia.MediaContextProvider,
+    Media = _createMedia.Media;
+
+var IndexElectricite = /*#__PURE__*/function (_React$Component) {
+  Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(IndexElectricite, _React$Component);
+
+  var _super = _createSuper(IndexElectricite);
+
+  function IndexElectricite(props) {
+    Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, IndexElectricite);
+
+    return _super.call(this, props);
+  }
+
+  Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(IndexElectricite, [{
+    key: "render",
+    value: function render() {
+      var mobile = this.props.mobile;
+      var shadow = {
+        color: 'lightgreen',
+        textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+        textAlign: "center",
+        fontFamily: "verdana",
+        fontSize: mobile ? 15 : 25
+      };
+      return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(_components_MyLayout__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Container"], {
+          style: {
+            textAlign: "center",
+            letterSpacing: 3,
+            paddingTop: 30
+          },
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Segment"], {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("strong", {
+              style: shadow,
+              children: " R.T.S des electriciens reconnus Agr\xE9es Consuel/Qualifelec"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 37,
+              columnNumber: 29
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 36,
+            columnNumber: 21
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("em", {
+            children: [" R.T.S est un professionnel de l'installation \xE9lectrique au savoir-faire reconnu.", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 39,
+              columnNumber: 106
+            }, this), "Bas\xE9e \xE0 LES LILAS  certifi\xE9 par l'elite des electriciens ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("strong", {
+              children: "CONSUEL"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 40,
+              columnNumber: 90
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 40,
+              columnNumber: 114
+            }, this), "R.T.S vous accompagne et vous propose des equipements adapt\xE9s aux tendances et aux \xE9volutions du march\xE9 de l'\xE9lectricit\xE9 tout en respectant les exigences de la norme NF C 15-100 qui concerne les locaux d\u2019habitation.", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 42,
+              columnNumber: 104
+            }, this), "R.T.S est specialis\xE9 dans les ERP ,s'occupe de faire vos demarche aupres d'EDF afin d'obtenir les contrats les mieux adapt\xE9s a votre profession", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Segment"], {
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("p", {
+                style: shadow,
+                children: "Des installateurs aux comp\xE9tences multiples"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 48,
+                columnNumber: 29
+              }, this)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 47,
+              columnNumber: 25
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("ul", {
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("li", {
+                children: "Renover une installation"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 52,
+                columnNumber: 37
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("li", {
+                children: "Remise aux normes de l'installation"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 53,
+                columnNumber: 37
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("li", {
+                children: "Mise en securit\xE9 de votre installation"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 54,
+                columnNumber: 37
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("li", {
+                children: "Remise d'un Consuel certifiant l'installation conforme"
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 55,
+                columnNumber: 37
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 51,
+              columnNumber: 33
+            }, this)]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 39,
+            columnNumber: 21
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
+            columns: 3,
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"].Row, {
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"].Column, {
+                children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Image"], {
+                  src: "img/electricite/loi alure.png",
+                  size: "larg",
+                  alt: "loi allure"
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 61,
+                  columnNumber: 33
+                }, this)
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 60,
+                columnNumber: 29
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"].Column, {
+                children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Image"], {
+                  src: "img/electricite/habilitation electrique.png",
+                  size: "larg",
+                  alt: "habilitation"
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 64,
+                  columnNumber: 33
+                }, this)
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 63,
+                columnNumber: 29
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"].Column, {
+                children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Image"], {
+                  src: "img/electricite/mise en conformite.png",
+                  size: "larg",
+                  alt: "mise en conformite"
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 67,
+                  columnNumber: 33
+                }, this)
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 66,
+                columnNumber: 29
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 59,
+              columnNumber: 25
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 58,
+            columnNumber: 21
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Segment"], {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("p", {
+              style: shadow,
+              children: "OBJECTIFS"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 72,
+              columnNumber: 25
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 71,
+            columnNumber: 21
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("em", {
+            children: ["La r\xE9glementation relative \xE0 la mise en location des logements existants dont l\u2019installation \xE9lectrique a plus de 15 ans.", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 75,
+              columnNumber: 72
+            }, this), "Nous serons capables d\u2019identifier et de formaliser dans un rapport les d\xE9fauts de s\xE9curit\xE9 \xE0 corriger dans le cadre de la mise en s\xE9curit\xE9.", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 78,
+              columnNumber: 41
+            }, this), "Nous sommes capables d\u2019analyser l\u2019\xE9tat de l\u2019installation \xE9lectrique d\u2019un logement et de d\xE9tecter les anomalies de s\xE9curit\xE9 \xE0 corriger pour assurer la s\xE9curit\xE9 des personnes et la conservation des biens, de pouvoir analyser diff\xE9rentes solutions techniques et d\u2019en choisir la mieux adapt\xE9e", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 82,
+              columnNumber: 61
+            }, this), "Connaitre les r\xE8gles de mise en \u0153uvre des derni\xE8res \xE9volutions normatives"]
+          }, void 0, true, {
+            fileName: _jsxFileName,
+            lineNumber: 74,
+            columnNumber: 21
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 84,
+            columnNumber: 29
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 84,
+            columnNumber: 35
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
+            columns: 3,
+            divided: true,
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"].Row, {
+              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"].Column, {
+                children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Image"], {
+                  src: "img/electricite/tableau1.png",
+                  size: "larg",
+                  alt: "mise en securite "
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 88,
+                  columnNumber: 29
+                }, this)
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 87,
+                columnNumber: 25
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"].Column, {
+                children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Image"], {
+                  src: "img/electricite/tableau2.png",
+                  size: "larg",
+                  alt: "mise en securite"
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 91,
+                  columnNumber: 29
+                }, this)
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 90,
+                columnNumber: 25
+              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Grid"].Column, {
+                children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Image"], {
+                  src: "img/electricite/disjoncteurs.png",
+                  size: "larg",
+                  alt: "disjoncteur"
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 94,
+                  columnNumber: 29
+                }, this)
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 93,
+                columnNumber: 25
+              }, this)]
+            }, void 0, true, {
+              fileName: _jsxFileName,
+              lineNumber: 86,
+              columnNumber: 25
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 85,
+            columnNumber: 21
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(semantic_ui_react__WEBPACK_IMPORTED_MODULE_7__["Segment"], {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("p", {
+              style: shadow,
+              children: "Les Obligations"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 99,
+              columnNumber: 25
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 98,
+            columnNumber: 22
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("em", {
+            children: "Apr\xE8s la loi ENL qui a instaur\xE9 en 2009 l\u2019obligation de la fourniture de l\u2019\xE9tat de l\u2019installation \xE9lectrique \xE0 chaque transaction de vente immobili\xE8re, la loi ALUR et son d\xE9cret du 11 ao\xFBt 2016 relatif \xE0 l\u2019\xE9tat de l\u2019installation int\xE9rieure d\u2019\xE9lectricit\xE9 dans les logements en location, va obliger les propri\xE9taires bailleurs, d\xE8s juillet 2017, \xE0 annexer au contrat de location un \xE9tat de l\u2019installation int\xE9rieure d\u2019\xE9lectricit\xE9 ou, mieux encore car elle apporte une v\xE9ritable garantie de r\xE9sultat, une Attestation de Conformit\xE9 pour mise en s\xE9curit\xE9 vis\xE9e par CONSUEL suite aux travaux r\xE9alis\xE9s."
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 101,
+            columnNumber: 25
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 107,
+            columnNumber: 127
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("br", {}, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 107,
+            columnNumber: 133
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 34,
+          columnNumber: 17
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 33,
+        columnNumber: 13
+      }, this);
+    }
+  }]);
+
+  return IndexElectricite;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+var GreatherIndexElectricite = /*#__PURE__*/function (_React$Component2) {
+  Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(GreatherIndexElectricite, _React$Component2);
+
+  var _super2 = _createSuper(GreatherIndexElectricite);
+
+  function GreatherIndexElectricite() {
+    Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, GreatherIndexElectricite);
+
+    return _super2.apply(this, arguments);
+  }
+
+  Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(GreatherIndexElectricite, [{
+    key: "render",
+    value: function render() {
+      var children = this.props.children;
+      return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(Media, {
+        greaterThan: "mobile",
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(IndexElectricite, {}, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 120,
+          columnNumber: 17
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 119,
+        columnNumber: 13
+      }, this);
+    }
+  }]);
+
+  return GreatherIndexElectricite;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+var MobileIndexElectricite = /*#__PURE__*/function (_React$Component3) {
+  Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(MobileIndexElectricite, _React$Component3);
+
+  var _super3 = _createSuper(MobileIndexElectricite);
+
+  function MobileIndexElectricite() {
+    Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, MobileIndexElectricite);
+
+    return _super3.apply(this, arguments);
+  }
+
+  Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(MobileIndexElectricite, [{
+    key: "render",
+    value: function render() {
+      var children = this.props.children;
+      return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(Media, {
+        between: ["mobile", "tablet"],
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(IndexElectricite, {
+          mobile: true
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 131,
+          columnNumber: 17
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 130,
+        columnNumber: 13
+      }, this);
+    }
+  }]);
+
+  return MobileIndexElectricite;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+var Electricite = /*#__PURE__*/function (_React$Component4) {
+  Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(Electricite, _React$Component4);
+
+  var _super4 = _createSuper(Electricite);
+
+  function Electricite() {
+    Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Electricite);
+
+    return _super4.apply(this, arguments);
+  }
+
+  Object(C_Users_famil_Desktop_emile_programmation_site_emile_renovation_node_modules_next_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Electricite, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(MediaContextProvider, {
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(GreatherIndexElectricite, {
+            children: this.props.children
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 143,
+            columnNumber: 21
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxDEV"])(MobileIndexElectricite, {
+            children: this.props.children
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 144,
+            columnNumber: 21
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 142,
+          columnNumber: 17
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 141,
+        columnNumber: 13
+      }, this);
+    }
+  }]);
+
+  return Electricite;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+
+
+;
+    var _a, _b;
+    // Legacy CSS implementations will `eval` browser code in a Node.js context
+    // to extract CSS. For backwards compatibility, we need to check we're in a
+    // browser context before continuing.
+    if (typeof self !== 'undefined' &&
+        // AMP / No-JS mode does not inject these helpers:
+        '$RefreshHelpers$' in self) {
+        var currentExports = module.__proto__.exports;
+        var prevExports = (_b = (_a = module.hot.data) === null || _a === void 0 ? void 0 : _a.prevExports) !== null && _b !== void 0 ? _b : null;
+        // This cannot happen in MainTemplate because the exports mismatch between
+        // templating and execution.
+        self.$RefreshHelpers$.registerExportsForReactRefresh(currentExports, module.i);
+        // A module can be accepted automatically based on its exports, e.g. when
+        // it is a Refresh Boundary.
+        if (self.$RefreshHelpers$.isReactRefreshBoundary(currentExports)) {
+            // Save the previous exports on update so we can compare the boundary
+            // signatures.
+            module.hot.dispose(function (data) {
+                data.prevExports = currentExports;
+            });
+            // Unconditionally accept an update to this module, we'll check if it's
+            // still a Refresh Boundary later.
+            module.hot.accept();
+            // This field is set when the previous version of this module was a
+            // Refresh Boundary, letting us know we need to check for invalidation or
+            // enqueue an update.
+            if (prevExports !== null) {
+                // A boundary can become ineligible if its exports are incompatible
+                // with the previous exports.
+                //
+                // For example, if you add/remove/change exports, we'll want to
+                // re-execute the importing modules, and force those components to
+                // re-render. Similarly, if you convert a class component to a
+                // function, we want to invalidate the boundary.
+                if (self.$RefreshHelpers$.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)) {
+                    module.hot.invalidate();
+                }
+                else {
+                    self.$RefreshHelpers$.scheduleUpdate();
+                }
+            }
+        }
+        else {
+            // Since we just executed the code for the module, it's possible that the
+            // new exports made it ineligible for being a boundary.
+            // We only care about the case when we were _previously_ a boundary,
+            // because we already accepted this update (accidental side effect).
+            var isNoLongerABoundary = prevExports !== null;
+            if (isNoLongerABoundary) {
+                module.hot.invalidate();
+            }
+        }
+    }
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/next/dist/compiled/webpack/harmony-module.js */ "./node_modules/next/dist/compiled/webpack/harmony-module.js")(module)))
+
+/***/ })
+
+})
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLy4vcGFnZXMvRWxlY3RyaWNpdGUuanMiXSwibmFtZXMiOlsiY3JlYXRlTWVkaWEiLCJicmVha3BvaW50cyIsIm1vYmlsZSIsInRhYmxldCIsImNvbXB1dGVyIiwiZWNyYW4iLCJNZWRpYUNvbnRleHRQcm92aWRlciIsIk1lZGlhIiwiSW5kZXhFbGVjdHJpY2l0ZSIsInByb3BzIiwic2hhZG93IiwiY29sb3IiLCJ0ZXh0U2hhZG93IiwidGV4dEFsaWduIiwiZm9udEZhbWlseSIsImZvbnRTaXplIiwibGV0dGVyU3BhY2luZyIsInBhZGRpbmdUb3AiLCJSZWFjdCIsIkNvbXBvbmVudCIsIkdyZWF0aGVySW5kZXhFbGVjdHJpY2l0ZSIsImNoaWxkcmVuIiwiTW9iaWxlSW5kZXhFbGVjdHJpY2l0ZSIsIkVsZWN0cmljaXRlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7O21CQUV3Q0Esa0VBQVcsQ0FBQztBQUNoREMsYUFBVyxFQUFFO0FBQ1RDLFVBQU0sRUFBRSxDQURDO0FBRVRDLFVBQU0sRUFBRSxHQUZDO0FBR1RDLFlBQVEsRUFBRSxJQUhEO0FBSVRDLFNBQUssRUFBRTtBQUpFO0FBRG1DLENBQUQsQztJQUEzQ0Msb0IsZ0JBQUFBLG9CO0lBQXNCQyxLLGdCQUFBQSxLOztJQVN4QkMsZ0I7Ozs7O0FBQ0YsNEJBQVlDLEtBQVosRUFBbUI7QUFBQTs7QUFBQSw2QkFDVEEsS0FEUztBQUdsQjs7Ozs2QkFFUTtBQUFBLFVBQ0dQLE1BREgsR0FDYyxLQUFLTyxLQURuQixDQUNHUCxNQURIO0FBRUwsVUFBTVEsTUFBTSxHQUNaO0FBQ0lDLGFBQUssRUFBRSxZQURYO0FBRUlDLGtCQUFVLEVBQUUsc0RBRmhCO0FBR0lDLGlCQUFTLEVBQUUsUUFIZjtBQUlJQyxrQkFBVSxFQUFFLFNBSmhCO0FBS0lDLGdCQUFRLEVBQUViLE1BQU0sR0FBRSxFQUFGLEdBQUs7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LENBQUNDLFM7O0lBb0cvQkMsd0I7Ozs7Ozs7Ozs7Ozs7NkJBQ087QUFBQSxVQUNHQyxRQURILEdBQ2dCLEtBQUtaLEtBRHJCLENBQ0dZLFFBREg7QUFFTCwwQkFDSSxxRUFBQyxLQUFEO0FBQU8sbUJBQVcsRUFBQyxRQUFuQjtBQUFBLCtCQUNJLHFFQUFDLGdCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFESjtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBREo7QUFLSDs7OztFQVJrQ0gsNENBQUssQ0FBQ0MsUzs7SUFXdkNHLHNCOzs7Ozs7Ozs7Ozs7OzZCQUNPO0FBQUEsVUFDR0QsUUFESCxHQUNnQixLQUFLWixLQURyQixDQUNHWSxRQURIO0FBRUwsMEJBQ0kscUVBQUMsS0FBRDtBQUFPLGVBQU8sRUFBRSxDQUFDLFFBQUQsRUFBVyxRQUFYLENBQWhCO0FBQUEsK0JBQ0kscUVBQUMsZ0JBQUQ7QUFBa0IsZ0JBQU07QUFBeEI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQURKO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FESjtBQUtIOzs7O0VBUmdDSCw0Q0FBSyxDQUFDQyxTOztJQVd0QkksVzs7Ozs7Ozs7Ozs7Ozs2QkFFUjtBQUNMLDBCQUNJO0FBQUEsK0JBQ0kscUVBQUMsb0JBQUQ7QUFBQSxrQ0FDSSxxRUFBQyx3QkFBRDtBQUFBLHNCQUE0QixLQUFLZCxLQUFMLENBQVdZO0FBQXZDO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBREosZUFFSSxxRUFBQyxzQkFBRDtBQUFBLHNCQUF5QixLQUFLWixLQUFMLENBQVdZO0FBQXBDO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBRko7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBREo7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQURKO0FBUUg7Ozs7RUFYb0NILDRDQUFLLENBQUNDLFMiLCJmaWxlIjoic3RhdGljL3dlYnBhY2svcGFnZXMvRWxlY3RyaWNpdGUuNjhlOGEzMDIwOTI1MzBlMTkxYjAuaG90LXVwZGF0ZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tIFwicmVhY3RcIjtcclxuaW1wb3J0IHsgSW1hZ2UsQ29udGFpbmVyLCBHcmlkLFNlZ21lbnQgfSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCdcclxuaW1wb3J0IExheW91dCBmcm9tIFwiLi4vY29tcG9uZW50cy9NeUxheW91dFwiXHJcbmltcG9ydCB7IGNyZWF0ZU1lZGlhIH0gZnJvbSAnQGFydHN5L2ZyZXNuZWwnXHJcblxyXG5jb25zdCB7IE1lZGlhQ29udGV4dFByb3ZpZGVyLCBNZWRpYSB9ID0gY3JlYXRlTWVkaWEoe1xyXG4gICAgYnJlYWtwb2ludHM6IHtcclxuICAgICAgICBtb2JpbGU6IDAsXHJcbiAgICAgICAgdGFibGV0OiA3NjgsXHJcbiAgICAgICAgY29tcHV0ZXI6IDEwMjQsXHJcbiAgICAgICAgZWNyYW46IDExOTJcclxuICAgIH1cclxufSlcclxuXHJcbmNsYXNzIEluZGV4RWxlY3RyaWNpdGUgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgY29uc3RydWN0b3IocHJvcHMpIHtcclxuICAgICAgICBzdXBlcihwcm9wcyk7XHJcblxyXG4gICAgfVxyXG5cclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICBjb25zdCB7IG1vYmlsZSB9ID0gdGhpcy5wcm9wc1xyXG4gICAgICAgIGNvbnN0IHNoYWRvdyA9XHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBjb2xvcjogJ2xpZ2h0Z3JlZW4nLFxyXG4gICAgICAgICAgICB0ZXh0U2hhZG93OiAnLTJweCAwIGJsYWNrLCAwIDJweCBibGFjaywgMnB4IDAgYmxhY2ssIDAgLTJweCBibGFjaycsXHJcbiAgICAgICAgICAgIHRleHRBbGlnbjogXCJjZW50ZXJcIixcclxuICAgICAgICAgICAgZm9udEZhbWlseTogXCJ2ZXJkYW5hXCIsXHJcbiAgICAgICAgICAgIGZvbnRTaXplOiBtb2JpbGUgPzE1OjI1XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8TGF5b3V0PlxyXG4gICAgICAgICAgICAgICAgPENvbnRhaW5lciBzdHlsZT17e3RleHRBbGlnbjpcImNlbnRlclwiLGxldHRlclNwYWNpbmc6MyxwYWRkaW5nVG9wOjMwfX0+XHJcbiAgICAgICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICAgICAgPFNlZ21lbnQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3Ryb25nIHN0eWxlPXtzaGFkb3d9PiBSLlQuUyBkZXMgZWxlY3RyaWNpZW5zIHJlY29ubnVzIEFncsOpZXMgQ29uc3VlbC9RdWFsaWZlbGVjPC9zdHJvbmc+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9TZWdtZW50PlxyXG4gICAgICAgICAgICAgICAgICAgIDxlbT4gUi5ULlMgZXN0IHVuIHByb2Zlc3Npb25uZWwgZGUgbCdpbnN0YWxsYXRpb24gw6lsZWN0cmlxdWUgYXUgc2F2b2lyLWZhaXJlIHJlY29ubnUuPGJyIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFzw6llIMOgIExFUyBMSUxBUyAgY2VydGlmacOpIHBhciBsJ2VsaXRlIGRlcyBlbGVjdHJpY2llbnMgPHN0cm9uZz5DT05TVUVMPC9zdHJvbmc+PGJyIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUi5ULlMgdm91cyBhY2NvbXBhZ25lIGV0IHZvdXMgcHJvcG9zZSBkZXMgZXF1aXBlbWVudHMgYWRhcHTDqXMgYXV4IHRlbmRhbmNlcyBldCBhdXggw6l2b2x1dGlvbnMgZHUgbWFyY2jDqSBkZSBsJ8OpbGVjdHJpY2l0w6kgdG91dCBlbiByZXNwZWN0YW50IGxlc1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGV4aWdlbmNlcyBkZSBsYSBub3JtZSBORiBDIDE1LTEwMCBxdWkgY29uY2VybmUgbGVzIGxvY2F1eCBk4oCZaGFiaXRhdGlvbi48YnIgLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBSLlQuUyBlc3Qgc3BlY2lhbGlzw6kgZGFucyBsZXMgRVJQICxzJ29jY3VwZSBkZSBmYWlyZSB2b3MgZGVtYXJjaGUgYXVwcmVzIGQnRURGIGFmaW4gZCdvYnRlbmlyIGxlc1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRyYXRzIGxlcyBtaWV1eCBhZGFwdMOpcyBhIHZvdHJlIHByb2Zlc3Npb25cclxuICAgICAgICAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8U2VnbWVudD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwIHN0eWxlPXtzaGFkb3d9PkRlcyBpbnN0YWxsYXRldXJzIGF1eCBjb21ww6l0ZW5jZXMgbXVsdGlwbGVzPC9wPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L1NlZ21lbnQ+XHJcbiAgICAgICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHVsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGk+UmVub3ZlciB1bmUgaW5zdGFsbGF0aW9uPC9saT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxpPlJlbWlzZSBhdXggbm9ybWVzIGRlIGwnaW5zdGFsbGF0aW9uPC9saT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxpPk1pc2UgZW4gc2VjdXJpdMOpIGRlIHZvdHJlIGluc3RhbGxhdGlvbjwvbGk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsaT5SZW1pc2UgZCd1biBDb25zdWVsIGNlcnRpZmlhbnQgbCdpbnN0YWxsYXRpb24gY29uZm9ybWU8L2xpPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdWw+PC9lbT5cclxuICAgICAgICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgICAgICAgICA8R3JpZCBjb2x1bW5zPXszfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPEdyaWQuUm93PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPEdyaWQuQ29sdW1uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9XCJpbWcvZWxlY3RyaWNpdGUvbG9pIGFsdXJlLnBuZ1wiIHNpemU9XCJsYXJnXCIgYWx0PVwibG9pIGFsbHVyZVwiIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0dyaWQuQ29sdW1uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPEdyaWQuQ29sdW1uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9XCJpbWcvZWxlY3RyaWNpdGUvaGFiaWxpdGF0aW9uIGVsZWN0cmlxdWUucG5nXCIgc2l6ZT1cImxhcmdcIiBhbHQ9XCJoYWJpbGl0YXRpb25cIiAvPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9HcmlkLkNvbHVtbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxHcmlkLkNvbHVtbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPVwiaW1nL2VsZWN0cmljaXRlL21pc2UgZW4gY29uZm9ybWl0ZS5wbmdcIiBzaXplPVwibGFyZ1wiIGFsdD1cIm1pc2UgZW4gY29uZm9ybWl0ZVwiLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvR3JpZC5Db2x1bW4+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvR3JpZC5Sb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9HcmlkPlxyXG4gICAgICAgICAgICAgICAgICAgIDxTZWdtZW50ID5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgc3R5bGU9e3NoYWRvd30+T0JKRUNUSUZTPC9wPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvU2VnbWVudD5cclxuICAgICAgICAgICAgICAgICAgICA8ZW0gID5MYSByw6lnbGVtZW50YXRpb24gcmVsYXRpdmUgw6AgbGEgbWlzZSBlbiBsb2NhdGlvbiBkZXMgbG9nZW1lbnRzIGV4aXN0YW50cyBkb250XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBs4oCZaW5zdGFsbGF0aW9uIMOpbGVjdHJpcXVlIGEgcGx1cyBkZSAxNSBhbnMuPGJyIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBOb3VzIHNlcm9ucyBjYXBhYmxlcyBk4oCZaWRlbnRpZmllciBldCBkZVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9ybWFsaXNlciBkYW5zIHVuIHJhcHBvcnQgbGVzIGTDqWZhdXRzIGRlIHPDqWN1cml0w6kgw6AgY29ycmlnZXIgZGFucyBsZSBjYWRyZSBkZSBsYSBtaXNlXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbiBzw6ljdXJpdMOpLjxiciAvPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgTm91cyBzb21tZXMgY2FwYWJsZXMgZOKAmWFuYWx5c2VyIGzigJnDqXRhdCBkZSBs4oCZaW5zdGFsbGF0aW9uIMOpbGVjdHJpcXVlIGTigJl1biBsb2dlbWVudCBldCBkZVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZMOpdGVjdGVyIGxlcyBhbm9tYWxpZXMgZGUgc8OpY3VyaXTDqSDDoCBjb3JyaWdlciBwb3VyIGFzc3VyZXIgbGEgc8OpY3VyaXTDqSBkZXMgcGVyc29ubmVzIGV0XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsYSBjb25zZXJ2YXRpb24gZGVzIGJpZW5zLCBkZSBwb3V2b2lyIGFuYWx5c2VyIGRpZmbDqXJlbnRlcyBzb2x1dGlvbnMgdGVjaG5pcXVlc1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZXQgZOKAmWVuIGNob2lzaXIgbGEgbWlldXggYWRhcHTDqWU8YnIgLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIENvbm5haXRyZSBsZXMgcsOoZ2xlcyBkZSBtaXNlIGVuIMWTdXZyZSBkZXMgZGVybmnDqHJlcyDDqXZvbHV0aW9ucyBub3JtYXRpdmVzPC9lbT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxiciAvPjxiciAvPlxyXG4gICAgICAgICAgICAgICAgICAgIDxHcmlkIGNvbHVtbnM9ezN9IGRpdmlkZWQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxHcmlkLlJvdz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPEdyaWQuQ29sdW1uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPEltYWdlIHNyYz1cImltZy9lbGVjdHJpY2l0ZS90YWJsZWF1MS5wbmdcIiBzaXplPVwibGFyZ1wiYWx0PVwibWlzZSBlbiBzZWN1cml0ZSBcIiAvPiBcclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9HcmlkLkNvbHVtbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPEdyaWQuQ29sdW1uPiBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9XCJpbWcvZWxlY3RyaWNpdGUvdGFibGVhdTIucG5nXCIgc2l6ZT1cImxhcmdcImFsdD1cIm1pc2UgZW4gc2VjdXJpdGVcIiAvPiBcclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9HcmlkLkNvbHVtbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPEdyaWQuQ29sdW1uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPEltYWdlIHNyYz1cImltZy9lbGVjdHJpY2l0ZS9kaXNqb25jdGV1cnMucG5nXCIgc2l6ZT1cImxhcmdcIiBhbHQ9XCJkaXNqb25jdGV1clwiIC8+IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0dyaWQuQ29sdW1uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0dyaWQuUm93PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvR3JpZD5cclxuICAgICAgICAgICAgICAgICAgICAgPFNlZ21lbnQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIHN0eWxlPXtzaGFkb3d9PkxlcyBPYmxpZ2F0aW9uczwvcD5cclxuICAgICAgICAgICAgICAgICAgICA8L1NlZ21lbnQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxlbT5BcHLDqHMgbGEgbG9pIEVOTCBxdWkgYSBpbnN0YXVyw6kgZW4gMjAwOSBs4oCZb2JsaWdhdGlvblxyXG4gICAgICAgICAgICAgICAgICAgICAgICBkZSBsYSBmb3Vybml0dXJlIGRlIGzigJnDqXRhdCBkZSBs4oCZaW5zdGFsbGF0aW9uIMOpbGVjdHJpcXVlIMOgIGNoYXF1ZSB0cmFuc2FjdGlvbiBkZSB2ZW50ZSBpbW1vYmlsacOocmUsXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGxhIGxvaSBBTFVSIGV0IHNvbiBkw6ljcmV0IGR1IDExIGFvw7t0IDIwMTYgcmVsYXRpZiDDoCBs4oCZw6l0YXQgZGUgbOKAmWluc3RhbGxhdGlvbiBpbnTDqXJpZXVyZVxyXG4gICAgICAgICAgICAgICAgICAgICAgICBk4oCZw6lsZWN0cmljaXTDqSBkYW5zIGxlcyBsb2dlbWVudHMgZW4gbG9jYXRpb24sIHZhIG9ibGlnZXIgbGVzIHByb3ByacOpdGFpcmVzIGJhaWxsZXVycyxcclxuICAgICAgICAgICAgICAgICAgICAgICAgZMOocyBqdWlsbGV0IDIwMTcsIMOgIGFubmV4ZXIgYXUgY29udHJhdCBkZSBsb2NhdGlvbiB1biDDqXRhdCBkZSBs4oCZaW5zdGFsbGF0aW9uIGludMOpcmlldXJlXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGTigJnDqWxlY3RyaWNpdMOpIG91LCBtaWV1eCBlbmNvcmUgY2FyIGVsbGUgYXBwb3J0ZSB1bmUgdsOpcml0YWJsZSBnYXJhbnRpZSBkZSByw6lzdWx0YXQsXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHVuZSBBdHRlc3RhdGlvbiBkZSBDb25mb3JtaXTDqSBwb3VyIG1pc2UgZW4gc8OpY3VyaXTDqSB2aXPDqWUgcGFyIENPTlNVRUwgc3VpdGUgYXV4IHRyYXZhdXggcsOpYWxpc8Opcy48L2VtPjxiciAvPjxiciAvPlxyXG4gICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICA8L0NvbnRhaW5lcj5cclxuICAgICAgICAgICAgPC9MYXlvdXQ+XHJcblxyXG4gICAgICAgIClcclxuICAgIH1cclxufVxyXG5jbGFzcyBHcmVhdGhlckluZGV4RWxlY3RyaWNpdGUgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIGNvbnN0IHsgY2hpbGRyZW4gfSA9IHRoaXMucHJvcHNcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8TWVkaWEgZ3JlYXRlclRoYW49J21vYmlsZSc+XHJcbiAgICAgICAgICAgICAgICA8SW5kZXhFbGVjdHJpY2l0ZSAvPlxyXG4gICAgICAgICAgICA8L01lZGlhPlxyXG4gICAgICAgIClcclxuICAgIH1cclxufVxyXG5cclxuY2xhc3MgTW9iaWxlSW5kZXhFbGVjdHJpY2l0ZSBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgY29uc3QgeyBjaGlsZHJlbiB9ID0gdGhpcy5wcm9wc1xyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxNZWRpYSBiZXR3ZWVuPXtbXCJtb2JpbGVcIiwgXCJ0YWJsZXRcIl19PlxyXG4gICAgICAgICAgICAgICAgPEluZGV4RWxlY3RyaWNpdGUgbW9iaWxlIC8+XHJcbiAgICAgICAgICAgIDwvTWVkaWE+XHJcbiAgICAgICAgKVxyXG4gICAgfVxyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBFbGVjdHJpY2l0ZSBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XHJcblxyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICA8TWVkaWFDb250ZXh0UHJvdmlkZXI+XHJcbiAgICAgICAgICAgICAgICAgICAgPEdyZWF0aGVySW5kZXhFbGVjdHJpY2l0ZSA+e3RoaXMucHJvcHMuY2hpbGRyZW59PC9HcmVhdGhlckluZGV4RWxlY3RyaWNpdGU+XHJcbiAgICAgICAgICAgICAgICAgICAgPE1vYmlsZUluZGV4RWxlY3RyaWNpdGU+e3RoaXMucHJvcHMuY2hpbGRyZW59PC9Nb2JpbGVJbmRleEVsZWN0cmljaXRlPlxyXG4gICAgICAgICAgICAgICAgPC9NZWRpYUNvbnRleHRQcm92aWRlcj5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgKVxyXG4gICAgfVxyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=

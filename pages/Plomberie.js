@@ -33,11 +33,42 @@ class IndexPlomberie extends React.Component {
         return (
             <Layout>
                 <Container style={{ textAlign: "center", letterSpacing: 3, paddingTop: 30 }}>
-                    <Segment style={shadow}>
-                        Espace douche
+                    <Segment>
+                        <Grid>
+                            <Grid.Row columns={mobile ? 3 : 6}>
+                                <Grid.Column>
+                                    <Image src="img/plomberie/rapidite.png" spaced size="tiny" />
+                                    <br />Rapidité
+                                </Grid.Column>
+
+                                <Grid.Column>
+                                    <Image src="img/plomberie/telephone.png" spaced size="tiny" />
+                                    <br />Rendez-vous
+                                </Grid.Column>
+
+                                <Grid.Column>
+                                    <Image src="img/plomberie/devis.jpg" spaced size="tiny" />
+                                    <br />Devis rapide
+                                </Grid.Column>
+
+                                <Grid.Column>
+                                    <Image src="img/plomberie/baignoire.png" spaced size="tiny" />
+                                    <br />Baignoire
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Image src="img/plomberie/douche.png" spaced size="tiny" />
+                                    <br />Douche
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Image src="img/plomberie/competence.png" spaced size="tiny" />
+                                    <br />Déplacement
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
+
                     </Segment>
                     <center>
-                        <h2 style={{ fontFamily: "Comic Sans MS" }}>A l'italienne, douche hydromassante ou cabine de douche : profitez des bienfaits de l'eau. <br />Avec receveur ou carrelé, créez une douche à votre image !</h2><br/>
+                        <h2 style={{ fontFamily: "Comic Sans MS" }}>A l'italienne, douche hydromassante ou cabine de douche : profitez des bienfaits de l'eau. <br />Avec receveur ou carrelé, créez une douche à votre image ! </h2><br/>
                         </center>
                     <center >
                         <Image src="img/plomberie/espace douche 1.jpg" alt="douche 1" style={{ paddingTop: 30 }} />

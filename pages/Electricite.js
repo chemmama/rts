@@ -33,6 +33,39 @@ class IndexElectricite extends React.Component {
             <Layout>
                 <Container style={{textAlign:"center",letterSpacing:3,paddingTop:30}}>
                     <Segment>
+                    <Grid>
+                        <Grid.Row columns={mobile ? 3 : 6}>
+                            <Grid.Column>
+                                <Image src="img/electricite/devis.jpg" spaced size="tiny" />
+                                <br />Devis rapide
+                                </Grid.Column>
+
+                            <Grid.Column>
+                                <Image src="img/electricite/danger.png" spaced size="tiny" />
+                                <br />Danger
+                                </Grid.Column>
+
+                            <Grid.Column>
+                                <Image src="img/electricite/controle.png" spaced size="tiny" />
+                                <br />Controle
+                                </Grid.Column>
+
+                            <Grid.Column>
+                                <Image src="img/electricite/lampe.png" spaced size="tiny" />
+                                <br />Rapidité
+                                </Grid.Column>
+                            <Grid.Column>
+                                <Image src="img/electricite/mesure.png" spaced size="tiny" />
+                                <br />Mesure
+                                </Grid.Column>
+                            <Grid.Column>
+                                <Image src="img/electricite/fleche.png" spaced size="tiny" />
+                                <br />electricité
+                                </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                    </Segment>
+                    <Segment>
                             <strong style={shadow}> R.T.S des electriciens reconnus Agrées Consuel/Qualifelec</strong>
                     </Segment>
                     <em> R.T.S est un professionnel de l'installation électrique au savoir-faire reconnu.<br />
