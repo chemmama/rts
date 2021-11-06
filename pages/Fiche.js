@@ -156,7 +156,7 @@ export default class Fiche extends React.Component {
                         <Form.Field clearable
                             error={this.state.errorFiscalite}
                             required
-                            label="Revenue fiscal de référence (2020 ou 2019)"
+                            label="Revenue fiscal de référence "
                             placeholder="----" style={{ color: "yellow" }}
                             fluid
                             options={fiscalite}

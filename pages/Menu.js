@@ -87,7 +87,7 @@ class DesktopContainer extends React.Component {
                                 </Menu.Item>
 
                                 <Menu.Item>
-                                    {route === '/Nettoyage'+html ? <Image src='img/ecolo/rts.png' as='a' size='tiny' /> : <Button color="green" inverted
+                                    {route === '/Nettoyage' + html ? <Image src='img/ecolo/rts.png' as='a' size='tiny' /> : <Button color="green" inverted
                                         onClick={this.handleOpen}>Verifier votre eligibité</Button>}
                                 </Menu.Item>
 
@@ -96,8 +96,8 @@ class DesktopContainer extends React.Component {
                                     active={activeItem === 'Nettoyage'}
                                     onClick={this.handleItemClick}>
                                     <Image src="img/new1.png" size="mini" />
-                                       Nettoyage
-                            </Menu.Item>
+                                    Nettoyage
+                                </Menu.Item>
 
                                 <Dropdown item text='R.G.E' simple style={{ fontWeight: "bold" }}>
                                     <Dropdown.Menu>
@@ -188,7 +188,7 @@ class MobileContainer extends React.Component {
                         vertical
                         visible={sidebarOpened}>
                         <Menu.Item>
-                            {route === '/Nettoyage'+html ? null : <Button color="green" inverted
+                            {route === '/Nettoyage' + html ? null : <Button color="green" inverted
                                 onClick={this.handleOpen}>Verifier votre eligibité</Button>}
                         </Menu.Item>
                         <Menu.Item
@@ -196,7 +196,7 @@ class MobileContainer extends React.Component {
                             active={activeItem === 'Nettoyage'}
                             onClick={this.handleItemClick}>
                             <Image src="img/new1.png" size="mini" />
-                                       Nettoyage
+                            Nettoyage
                         </Menu.Item>
 
                         <Dropdown item text='R.G.E' pointing="left" style={{ fontWeight: "bold" }}>
