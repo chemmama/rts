@@ -111,8 +111,8 @@ export default class Fiche extends React.Component {
                             label="Vous Etes"
                             placeholder="----" style={{ color: "yellow" }}
                             fluid
-                            options={proprio}
-                            control={Dropdown}
+                            options={proprio} 
+                            control={Dropdown} 
                             name="proprio"
                             onChange={this.handleChange}
                           
@@ -353,33 +353,104 @@ const famille = [
 const fiscalite = [
     {
         key: '1',
-        text: 'de 0€ à 19074€',
-        value: 'de 0€ à 19074€',
+        text: 'de 0€ à 21.123€',
+        value:'de 0€ à 21.123€',
     },
     {
         key: '2',
-        text: 'de 19074€ à 27896€',
-        value: 'de 19074€ à 27896€',
+        text: 'de 21.123€ à 25.714€',
+        value:'de 21.123€ à 25.714€',
     },
     {
         key: '3',
-        text: 'de 27896€ à 33547€',
-        value: 'de 27896€ à 33547€',
+        text: 'de 25.714€ à 38.184€',
+        value:'de 25.714€ à 38.184€',
     },
     {
         key: '4',
-        text: 'de 33547€ à 39192€',
-        value: 'de 33547€ à 39192€',
+        text: 'de 0€ à 31.003€',
+        value:'de 0€ à 31.003€',
     },
     {
         key: '5',
-        text: 'de 39192€ à 44860€',
-        value: 'de 39192€ à 44860€',
+        text: 'de 31.003€ à 37.739€',
+        value:'de 31.003€ à 37.739€',
     },
     {
         key: '6',
-        text: '+ de 449860€',
-        value: '+ de 449860€',
+        text: 'de 37.739€ à 56.130€ ',
+        value:'de 37.739€ à 56.130€ ',
+    },
+    {
+        key: '8',
+        text: 'de 0 à 37.232€',
+        value:'de 0 à 37.232€',
+    },
+    {
+        key: '9',
+        text: 'de 37.232€ à 45.326€',
+        value:'de 37.232€ à 45.326€',
+    },
+    {
+        key: '10',
+        text: 'de 45.326€ à 67.585€',
+        value:'de 45.326€ à 67.585€',
+    },
+    {
+        key: '11',
+        text: 'de 0 à 43.472€',
+        value:'de 0 à 43.472€',
+    },
+    {
+        key: '12',
+        text: 'de 43.472€ à 52.926€',
+        value:'de 43.472€ à 52.926€',
+    },
+    {
+        key: '13',
+        text: 'de 52.926€ à 79.041€',
+        value:'de 52.926€ à 79.041€',
+    },
+    {
+        key: '14',
+        text: 'de 0 à 49.736€',
+        value:'de 0 à 49.736€',
+    },
+    {
+        key: '15',
+        text: 'de 49.736€ à 60.546€',
+        value:'de 49.736€ à 60.546€',
+    },
+    {
+        key: '16',
+        text: 'de 60.546€ à 90.496€',
+        value:'de 60.546€ à 90.496€',
+    },
+
+    {
+        key: '17',
+        text: '> 38.164€',
+        value:'> 38.164€',
+    },
+    {
+        key: '18',
+        text: '> 56.130€',
+        value:'> 56.130€',
+    },
+    {
+        key: '19',
+        text: '> 67.585€',
+        value:'> 67.585€',
+    },
+    {
+        key: '20',
+        text: '> 79.041€',
+        value:'> 79.041€',
+    },
+    {
+        key: '21',
+        text: '> 90.496€',
+        value:'> 90.496€',
     }
 ]
 
