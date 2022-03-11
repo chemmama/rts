@@ -28,7 +28,7 @@ export default class Home extends React.Component {
         return (
             <Layout>
                  <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={5000} animationOutDuration={1000} isVisible={true}>
-                    <h1 style={shadow}>Spécialité en rénovation Energetique</h1> 
+                    <h1 style={shadow}>Spécialité en rénovation Energetique</h1><br/>
                     <Container  style={{ textAlign: 'center'}}>
                     <Grid>
                         <Grid.Row  columns={mobile?2:5}>

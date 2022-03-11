@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Image, Card, Grid ,Button} from 'semantic-ui-react'
 import Layout from "../components/MyLayout"
 import { createMedia } from '@artsy/fresnel'
-
+import Link from "next/link" 
 
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
@@ -41,7 +41,7 @@ class IndexQualification extends React.Component {
                     <Image src="img/marque.jpg" centered spaced/>
                     <Image src='img/rge/Bandeau-RGE-chantier-par-chantier.png' spaced size="medium" />
                         <Grid divided='vertically'>
-                            <Grid.Row columns={mobile ? 2 : 4}>
+                            <Grid.Row columns={mobile ? 2 : 5}>
                                 <Grid.Column>
                                     <Card>
                                         <Image src='img/rge/logo-QualiPAC-2021-RGE.png' wrapped ui={false} />
@@ -97,7 +97,18 @@ class IndexQualification extends React.Component {
                                         </Card.Content>
                                     </Card>
                                 </Grid.Column>
-
+                        <Grid.Column>
+                            <Card>
+                                <Image src='img/rge/annuaire-des-rge.jpg' />
+                                <Card.Content>
+                                    <Card.Header>Annuaire des RGE</Card.Header>
+                                    <Card.Description><strong style={{ color: "green" }}>
+                                        <a href="https://www.annuairedesrge.com/person/81819729500020">Rénovation Tertiaire Service<br/> évaluation <br/>commentaires clients</a>
+                                       </strong>
+                                    </Card.Description>
+                                </Card.Content>
+                            </Card>
+                        </Grid.Column>
                         </Grid.Row>
                     </Grid>
                 </Container>
